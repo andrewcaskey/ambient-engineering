@@ -31,9 +31,9 @@ const getContactIcon = (type: string) => {
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#0F1729] border-t border-white/10 pt-12 pb-6 relative z-10">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+    <footer className="bg-[#0F1729] border-t border-white/10 pt-8 md:pt-12 pb-6 relative z-10 will-change-transform">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12">
           {/* Company info */}
           <div>
             <h3 className="text-2xl font-['Montserrat'] font-bold mb-4">
@@ -64,10 +64,8 @@ export const Footer = () => {
             <ul className="space-y-2">
               {FOOTER_LINKS.quickLinks.map((link) => (
                 <li key={link.path}>
-                  <Link href={link.path}>
-                    <a className="text-white/70 hover:text-[#F6C026] transition-colors">
-                      {link.name}
-                    </a>
+                  <Link href={link.path} className="text-white/70 hover:text-[#F6C026] transition-colors">
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -80,10 +78,8 @@ export const Footer = () => {
             <ul className="space-y-2">
               {FOOTER_LINKS.categories.map((category) => (
                 <li key={category.path}>
-                  <Link href={category.path}>
-                    <a className="text-white/70 hover:text-[#F6C026] transition-colors">
-                      {category.name}
-                    </a>
+                  <Link href={category.path} className="text-white/70 hover:text-[#F6C026] transition-colors">
+                    {category.name}
                   </Link>
                 </li>
               ))}
@@ -127,10 +123,8 @@ export const Footer = () => {
           <p>&copy; {COMPANY_INFO.copyrightYear} {COMPANY_INFO.name}. All rights reserved.</p>
           <div className="flex justify-center space-x-4 mt-2">
             {COMPANY_INFO.policies.map((policy) => (
-              <Link key={policy.path} href={policy.path}>
-                <a className="hover:text-[#F6C026] transition-colors">
-                  {policy.name}
-                </a>
+              <Link key={policy.path} href={policy.path} className="hover:text-[#F6C026] transition-colors">
+                {policy.name}
               </Link>
             ))}
           </div>
