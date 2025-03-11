@@ -12,19 +12,19 @@ export const ArticlesSection = () => {
   });
 
   return (
-    <section className="py-16 bg-gradient-to-b from-[#162447] to-[#0F1729] relative">
-      <div className="container mx-auto px-4">
+    <section className="py-10 md:py-16 bg-gradient-to-b from-[#162447] to-[#0F1729] relative">
+      <div className="container mx-auto px-4 md:px-6">
         <motion.div 
           variants={fadeIn("up")}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
-          className="text-center mb-12"
+          className="text-center mb-8 md:mb-12"
         >
-          <h2 className="text-4xl font-['Montserrat'] font-bold uppercase mb-4">
+          <h2 className="text-3xl md:text-4xl font-['Montserrat'] font-bold uppercase mb-3 md:mb-4">
             Latest <span className="text-[#F6C026]">Articles</span>
           </h2>
-          <div className="w-24 h-1 bg-[#F6C026] mx-auto"></div>
+          <div className="w-16 md:w-24 h-1 bg-[#F6C026] mx-auto"></div>
         </motion.div>
         
         {isLoading ? (
@@ -70,10 +70,8 @@ export const ArticlesSection = () => {
                     {article.content.substring(0, 150)}
                     {article.content.length > 150 ? '...' : ''}
                   </p>
-                  <Link href={`/articles/${article.id}`}>
-                    <a className="inline-block font-['Montserrat'] text-sm font-bold text-[#8A6FDF] hover:text-[#F6C026] transition-colors">
-                      Continue Reading →
-                    </a>
+                  <Link href={`/articles/${article.id}`} className="inline-block font-['Montserrat'] text-sm font-bold text-[#8A6FDF] hover:text-[#F6C026] transition-colors">
+                    Continue Reading →
                   </Link>
                 </div>
               </motion.article>
@@ -88,10 +86,8 @@ export const ArticlesSection = () => {
           viewport={{ once: true, amount: 0.25 }}
           className="text-center mt-10"
         >
-          <Link href="/articles">
-            <a className="inline-block bg-transparent border-2 border-[#8A6FDF] text-[#8A6FDF] px-6 py-2 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#8A6FDF] hover:text-white transition-colors duration-300">
-              Read All Articles
-            </a>
+          <Link href="/articles" className="inline-block bg-transparent border-2 border-[#8A6FDF] text-[#8A6FDF] px-6 py-2 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#8A6FDF] hover:text-white transition-colors duration-300">
+            Read All Articles
           </Link>
         </motion.div>
       </div>
