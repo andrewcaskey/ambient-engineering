@@ -78,12 +78,12 @@ export const NewsletterSection = () => {
         >
           <div className="text-center mb-8">
             <h2 className="text-3xl font-['Montserrat'] font-bold uppercase mb-4">
-              Join Our <span className="text-[#F6C026]">Dreamers</span> Club
+              Join <span className="text-[#C8D5B9]">AmbientLab</span> Community
             </h2>
-            <p className="font-['Playfair_Display'] text-lg text-white/80 mb-6">
-              Subscribe to receive exclusive stories, videos, and updates delivered directly to your inbox
+            <p className="font-['Montserrat'] text-lg text-white/80 mb-6">
+              Subscribe to receive exclusive environments, scientific updates, and optimization tips
             </p>
-            <div className="w-16 h-1 bg-[#F6C026] mx-auto"></div>
+            <div className="w-16 h-1 bg-[#005F6B] mx-auto"></div>
           </div>
           
           <Form {...form}>

@@ -70,7 +70,7 @@ export const ArticlesSection = () => {
                     {article.content.substring(0, 150)}
                     {article.content.length > 150 ? '...' : ''}
                   </p>
-                  <Link href={`/articles/${article.id}`} className="inline-block font-['Montserrat'] text-sm font-bold text-[#8A6FDF] hover:text-[#F6C026] transition-colors">
+                  <Link href={`/articles/${article.id}`} className="inline-block font-['Montserrat'] text-sm font-bold text-[#005F6B] hover:text-[#C8D5B9] transition-colors">
                     Continue Reading →
                   </Link>
                 </div>
@@ -86,7 +86,7 @@ export const ArticlesSection = () => {
           viewport={{ once: true, amount: 0.25 }}
           className="text-center mt-10"
         >
-          <Link href="/articles" className="inline-block bg-transparent border-2 border-[#8A6FDF] text-[#8A6FDF] px-6 py-2 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#8A6FDF] hover:text-white transition-colors duration-300">
+          <Link href="/articles" className="inline-block bg-transparent border-2 border-[#005F6B] text-[#005F6B] px-6 py-2 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#005F6B] hover:text-white transition-colors duration-300">
             Read All Articles
           </Link>
         </motion.div>
