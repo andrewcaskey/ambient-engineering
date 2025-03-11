@@ -1,61 +1,61 @@
-export const APP_NAME = "Nocturnal Narratives";
+export const APP_NAME = "Ambient Engineering";
 
 export const NAVIGATION_LINKS = [
   { name: "Home", path: "/" },
-  { name: "Stories", path: "/stories" },
-  { name: "Videos", path: "/videos" },
+  { name: "Experience", path: "/stories" },
+  { name: "Science", path: "/videos" },
   { name: "Gallery", path: "/gallery" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" }
 ];
 
 export const ANNOUNCEMENT_MESSAGES = [
-  "NEW STORIES ADDED WEEKLY",
-  "SUBSCRIBE TO OUR NEWSLETTER FOR EXCLUSIVE CONTENT",
-  "FOLLOW US ON SOCIAL MEDIA FOR DAILY UPDATES"
+  "NEW ENVIRONMENTS ADDED WEEKLY",
+  "SUBSCRIBE FOR EXCLUSIVE AMBIENT TEMPLATES",
+  "OPTIMIZE YOUR SPACE WITH SCIENTIFIC PRECISION"
 ];
 
 export const SOCIAL_LINKS = [
   { name: "Instagram", icon: "Instagram", url: "https://instagram.com" },
   { name: "Twitter", icon: "Twitter", url: "https://twitter.com" },
   { name: "YouTube", icon: "Youtube", url: "https://youtube.com" },
-  { name: "Facebook", icon: "Facebook", url: "https://facebook.com" }
+  { name: "Spotify", icon: "Music", url: "https://spotify.com" }
 ];
 
 export const STORY_CATEGORIES = [
-  "Fantasy",
-  "Adventure",
-  "Mystery",
-  "Educational",
-  "Lullabies"
+  "Focus",
+  "Relaxation",
+  "Creativity",
+  "Productivity",
+  "Sleep"
 ];
 
 export const FOOTER_LINKS = {
   quickLinks: [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Stories", path: "/stories" },
-    { name: "Videos", path: "/videos" },
+    { name: "Experience", path: "/stories" },
+    { name: "Science", path: "/videos" },
     { name: "Gallery", path: "/gallery" },
     { name: "Contact", path: "/contact" }
   ],
   categories: [
-    { name: "Fantasy", path: "/stories?category=fantasy" },
-    { name: "Adventure", path: "/stories?category=adventure" },
-    { name: "Mystery", path: "/stories?category=mystery" },
-    { name: "Educational", path: "/stories?category=educational" },
-    { name: "Lullabies", path: "/stories?category=lullabies" }
+    { name: "Focus", path: "/stories?category=focus" },
+    { name: "Relaxation", path: "/stories?category=relaxation" },
+    { name: "Creativity", path: "/stories?category=creativity" },
+    { name: "Productivity", path: "/stories?category=productivity" },
+    { name: "Sleep", path: "/stories?category=sleep" }
   ],
   contact: [
-    { type: "address", value: "123 Starlight Avenue, Dreamland, Universe 54321" },
-    { type: "email", value: "hello@nocturnalnarratives.com" },
-    { type: "phone", value: "+1 (234) 567-890" }
+    { type: "address", value: "742 Ambient Avenue, Tech District, CA 94107" },
+    { type: "email", value: "contact@ambientengineering.com" },
+    { type: "phone", value: "+1 (415) 555-7890" }
   ]
 };
 
 export const COMPANY_INFO = {
   name: APP_NAME,
-  description: "Creating magical bedtime stories inspired by the wonders of nature and the night sky.",
+  description: "Empowering users to scientifically optimize their environments for enhanced wellbeing, productivity, and mood regulation.",
   copyrightYear: new Date().getFullYear(),
   policies: [
     { name: "Privacy Policy", path: "/privacy" },

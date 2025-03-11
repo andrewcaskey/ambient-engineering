@@ -7,11 +7,11 @@ export const HeroSection = () => {
     <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0F1729] z-10"></div>
       
-      {/* Starry night background image */}
+      {/* Modern tech background image */}
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center"
         style={{ 
-          backgroundImage: `url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1920&q=80')` 
+          backgroundImage: `url('https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?auto=format&fit=crop&w=1920&q=80')` 
         }}
       />
       
@@ -28,16 +28,16 @@ export const HeroSection = () => {
             animate="show"
             className="text-5xl md:text-7xl font-['Montserrat'] font-black uppercase mb-6 tracking-wide text-white drop-shadow-lg"
           >
-            Where <span className="text-[#F6C026]">Dreams</span> Take Flight
+            Engineer Your <span className="text-[#005F6B]">Perfect</span> Environment
           </motion.h1>
           
           <motion.p 
             variants={fadeIn("up", 0.4)}
             initial="hidden"
             animate="show"
-            className="font-['Playfair_Display'] text-xl md:text-2xl max-w-2xl mx-auto mb-8 text-white/90"
+            className="font-['Space_Mono'] text-xl md:text-2xl max-w-2xl mx-auto mb-8 text-white/90"
           >
-            Immerse yourself in enchanting nature-themed bedtime stories under the stars
+            Scientifically optimize your spaces for enhanced wellbeing, productivity, and mood regulation
           </motion.p>
           
           <motion.div 
@@ -47,13 +47,13 @@ export const HeroSection = () => {
             className="flex flex-col sm:flex-row justify-center gap-4"
           >
             <Link href="/stories">
-              <a className="bg-[#F6C026] text-[#0F1729] px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-white transition-colors duration-300">
-                Explore Stories
+              <a className="bg-[#005F6B] text-white px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-colors duration-300">
+                Explore Environments
               </a>
             </Link>
             <Link href="#newsletter">
-              <a className="border-2 border-white bg-transparent px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-white hover:text-[#0F1729] transition-colors duration-300">
-                Subscribe
+              <a className="border-2 border-[#C8D5B9] bg-transparent px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-colors duration-300">
+                Get Started
               </a>
             </Link>
           </motion.div>
