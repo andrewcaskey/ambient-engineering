@@ -7,11 +7,10 @@ import { Play, ChevronRight, Share2, Bookmark, Microscope, Lightbulb } from "luc
 
 export const ScienceSection = () => {
   const { 
-    data: featuredVideo, 
+    data: featuredVideos, 
     isLoading: isFeaturedLoading 
-  } = useQuery<Video[], Video[]>({
-    queryKey: ['/api/videos/featured'],
-    select: (data) => data.length > 0 ? [data[0]] : []
+  } = useQuery<Video[]>({
+    queryKey: ['/api/videos/featured']
   });
 
   const { 
@@ -19,7 +18,7 @@ export const ScienceSection = () => {
     isLoading: isVideosLoading 
   } = useQuery<Video[]>({
     queryKey: ['/api/videos'],
-    select: (data) => data.filter(video => !video.featured).slice(0, 3)
+    select: (data) => data?.filter(video => !video.featured).slice(0, 3) || []
   });
 
   return (
@@ -64,12 +63,12 @@ export const ScienceSection = () => {
                   </div>
                 </div>
               </div>
-            ) : featuredVideo && featuredVideo.length > 0 ? (
+            ) : featuredVideos && featuredVideos.length > 0 ? (
               <>
                 <div className="relative aspect-video">
                   <img 
-                    src={featuredVideo[0].thumbnailUrl || `https://source.unsplash.com/random/800x450/?research,laboratory&id=${featuredVideo[0].id}`}
-                    alt={featuredVideo[0].title} 
+                    src={featuredVideos[0].thumbnailUrl || `https://source.unsplash.com/random/800x450/?research,laboratory&id=${featuredVideos[0].id}`}
+                    alt={featuredVideos[0].title} 
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -82,12 +81,12 @@ export const ScienceSection = () => {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-['Montserrat'] font-bold text-2xl mb-2">{featuredVideo[0].title}</h3>
-                  <p className="text-white/70 mb-4">{featuredVideo[0].description}</p>
+                  <h3 className="font-['Montserrat'] font-bold text-2xl mb-2">{featuredVideos[0].title}</h3>
+                  <p className="text-white/70 mb-4">{featuredVideos[0].description}</p>
                   <div className="flex justify-between items-center">
                     <span className="text-[#C8D5B9] text-sm flex items-center">
                       <Microscope size={14} className="mr-1" />
-                      {featuredVideo[0].duration} • Featured Research
+                      {featuredVideos[0].duration} • Featured Research
                     </span>
                     <div className="flex space-x-3">
                       <button aria-label="Share" className="text-white/70 hover:text-[#C8D5B9] transition-colors">
