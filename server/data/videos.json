@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "The Cosmic Lullaby",
+    "description": "Follow the journey of Star, a tiny light who must find her way back to the night sky. Along her journey, she learns about bravery, friendship, and the importance of shining your own light.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1920&q=80",
+    "videoUrl": "https://example.com/videos/cosmic-lullaby",
+    "duration": "10:24",
+    "featured": true,
+    "publishedAt": "2023-04-15T18:30:00Z"
+  },
+  {
+    "id": 2,
+    "title": "Whispers of the Ancient Oak",
+    "description": "The wise old oak tree shares secrets of the forest with a curious child. Learn about the changing seasons, the cycles of nature, and the wisdom of patience.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1489549132488-d00b7eee80f1?auto=format&fit=crop&w=1920&q=80",
+    "videoUrl": "https://example.com/videos/ancient-oak",
+    "duration": "5:47",
+    "featured": false,
+    "publishedAt": "2023-04-12T14:20:00Z"
+  },
+  {
+    "id": 3,
+    "title": "The Firefly Ball",
+    "description": "Every summer solstice, the fireflies gather for a magnificent dance under the stars. This enchanting tale follows a young firefly attending his first midsummer celebration.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1502581827181-9cf3c3ee0106?auto=format&fit=crop&w=1920&q=80",
+    "videoUrl": "https://example.com/videos/firefly-ball",
+    "duration": "7:12",
+    "featured": false,
+    "publishedAt": "2023-04-08T19:45:00Z"
+  },
+  {
+    "id": 4,
+    "title": "The Midnight Garden",
+    "description": "Some flowers only bloom at night, revealing their magical properties to nocturnal creatures. Join a family of hedgehogs as they discover the wonders of these special plants.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1920&q=80",
+    "videoUrl": "https://example.com/videos/midnight-garden",
+    "duration": "6:36",
+    "featured": false,
+    "publishedAt": "2023-04-05T21:10:00Z"
+  },
+  {
+    "id": 5,
+    "title": "Moonbeam and the Cloud Whale",
+    "description": "A story about Moonbeam, a young star, who befriends a whale made of clouds. Together they travel across the night sky, having adventures and learning about the constellations.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?auto=format&fit=crop&w=1920&q=80",
+    "videoUrl": "https://example.com/videos/cloud-whale",
+    "duration": "8:53",
+    "featured": false,
+    "publishedAt": "2023-04-02T17:15:00Z"
+  },
+  {
+    "id": 6,
+    "title": "The Dream Collector",
+    "description": "Meet Mr. Noctus, who travels through the night collecting forgotten dreams. This heartwarming tale teaches children about the power of imagination and the beauty of letting go.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1513010072333-792fcc02ee7d?auto=format&fit=crop&w=1920&q=80",
+    "videoUrl": "https://example.com/videos/dream-collector",
+    "duration": "9:18",
+    "featured": false,
+    "publishedAt": "2023-03-28T22:40:00Z"
+  },
+  {
+    "id": 7,
+    "title": "Starlight Symphony",
+    "description": "When night falls, the stars begin to play a magical symphony that can only be heard by those with open hearts. Follow young Luna as she discovers how to listen to this celestial music.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1465311354905-789ff5f7a457?auto=format&fit=crop&w=1920&q=80",
+    "videoUrl": "https://example.com/videos/starlight-symphony",
+    "duration": "7:45",
+    "featured": false,
+    "publishedAt": "2023-03-25T20:05:00Z"
+  }
+]
