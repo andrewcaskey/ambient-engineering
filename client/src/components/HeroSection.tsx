@@ -105,7 +105,7 @@ export const HeroSection = () => {
             variants={fadeIn("up", 0.3)}
             initial="hidden"
             animate="show"
-            className="text-5xl md:text-7xl font-['Montserrat'] font-black uppercase mb-6 tracking-wide text-white drop-shadow-lg"
+            className="text-4xl sm:text-5xl md:text-7xl font-['Montserrat'] font-black uppercase mb-4 md:mb-6 tracking-wide text-white drop-shadow-lg"
           >
             Engineer Your <span className="text-[#C8D5B9]">Perfect</span> Environment
           </motion.h1>
@@ -114,7 +114,7 @@ export const HeroSection = () => {
             variants={fadeIn("up", 0.4)}
             initial="hidden"
             animate="show"
-            className="font-['Montserrat'] text-xl md:text-2xl max-w-2xl mx-auto mb-8 text-white/90"
+            className="font-['Montserrat'] text-base sm:text-xl md:text-2xl max-w-2xl mx-auto mb-6 md:mb-8 text-white/90 px-4"
           >
             Scientifically optimize your spaces for enhanced wellbeing, productivity, and mood regulation
           </motion.p>
@@ -125,16 +125,12 @@ export const HeroSection = () => {
             animate="show"
             className="flex flex-col sm:flex-row justify-center gap-4"
           >
-            <Link href="/stories">
-              <a className="bg-[#005F6B] text-white px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-colors duration-300">
-                Explore Environments
-              </a>
-            </Link>
-            <Link href="#newsletter">
-              <a className="border-2 border-[#C8D5B9] text-[#C8D5B9] bg-transparent px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-colors duration-300">
-                Get Started
-              </a>
-            </Link>
+            <a href="#" className="bg-[#005F6B] text-white px-6 sm:px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-colors duration-300 text-sm sm:text-base text-center">
+              Download App
+            </a>
+            <a href="#" className="border-2 border-[#C8D5B9] text-[#C8D5B9] bg-transparent px-6 sm:px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-colors duration-300 text-sm sm:text-base text-center">
+              Download Free Packs
+            </a>
           </motion.div>
         </motion.div>
       </div>

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Link, useLocation } from "wouter";
+import { useLocation } from "wouter";
 import { motion } from "framer-motion";
 import { NAVIGATION_LINKS, APP_NAME, SOCIAL_LINKS } from "@/lib/constants";
-import { Menu, Search, X } from "lucide-react";
+import { Menu, Search, X, Headphones, Download, Activity } from "lucide-react";
 import { 
   Instagram, 
   Twitter, 
@@ -33,11 +33,10 @@ export const Navbar = () => {
       <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
         {/* Logo */}
         <div className="flex items-center mb-4 md:mb-0">
-          <Link href="/">
-            <a className="text-3xl font-['Montserrat'] font-bold tracking-wider">
-              NOCTURNAL <span className="text-[#F6C026]">NARRATIVES</span>
-            </a>
-          </Link>
+          <a href="/" className="text-2xl sm:text-3xl font-['Montserrat'] font-bold tracking-wider flex items-center">
+            <Activity className="mr-2 text-[#C8D5B9]" size={28} />
+            <span>AMBIENT <span className="text-[#C8D5B9]">ENGINEERING</span></span>
+          </a>
         </div>
         
         {/* Mobile menu button */}
@@ -54,21 +53,23 @@ export const Navbar = () => {
         {/* Navigation links - desktop */}
         <div className="hidden md:flex flex-row items-center space-x-8">
           {NAVIGATION_LINKS.map((link) => (
-            <Link key={link.path} href={link.path}>
-              <a className={`relative uppercase font-['Montserrat'] font-semibold transition-colors ${
-                location === link.path ? "text-[#F6C026]" : "text-white hover:text-[#F6C026]"
-              } after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-[#F6C026] after:bottom-[-2px] after:left-0 after:transition-all ${
+            <a 
+              key={link.path} 
+              href={link.path}
+              className={`relative uppercase font-['Montserrat'] font-semibold transition-colors ${
+                location === link.path ? "text-[#C8D5B9]" : "text-white hover:text-[#C8D5B9]"
+              } after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-[#C8D5B9] after:bottom-[-2px] after:left-0 after:transition-all ${
                 location === link.path ? "after:w-full" : "hover:after:w-full"
-              }`}>
-                {link.name}
-              </a>
-            </Link>
+              }`}
+            >
+              {link.name}
+            </a>
           ))}
         </div>
         
         {/* Social and search - desktop */}
         <div className="hidden md:flex items-center space-x-4">
-          <button aria-label="Search" className="text-white hover:text-[#F6C026] transition-colors">
+          <button aria-label="Search" className="text-white hover:text-[#C8D5B9] transition-colors">
             <Search size={20} />
           </button>
           {SOCIAL_LINKS.map((social) => (
@@ -78,7 +79,7 @@ export const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={social.name}
-              className="text-white hover:text-[#F6C026] transition-colors"
+              className="text-white hover:text-[#C8D5B9] transition-colors"
             >
               {getLucideIcon(social.icon)}
             </a>
@@ -96,16 +97,16 @@ export const Navbar = () => {
           >
             <div className="flex flex-col items-center pt-10 space-y-6">
               {NAVIGATION_LINKS.map((link) => (
-                <Link key={link.path} href={link.path}>
-                  <a 
-                    className={`text-xl uppercase font-['Montserrat'] font-semibold ${
-                      location === link.path ? "text-[#F6C026]" : "text-white"
-                    }`}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {link.name}
-                  </a>
-                </Link>
+                <a 
+                  key={link.path} 
+                  href={link.path}
+                  className={`text-xl uppercase font-['Montserrat'] font-semibold ${
+                    location === link.path ? "text-[#C8D5B9]" : "text-white"
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </a>
               ))}
               
               <div className="flex space-x-6 mt-8 pt-8 border-t border-white/10 w-40 justify-center">
@@ -116,7 +117,7 @@ export const Navbar = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.name}
-                    className="text-white hover:text-[#F6C026] transition-colors"
+                    className="text-white hover:text-[#C8D5B9] transition-colors"
                   >
                     {getLucideIcon(social.icon)}
                   </a>
