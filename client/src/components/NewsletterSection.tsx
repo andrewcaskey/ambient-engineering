@@ -98,8 +98,13 @@ export const NewsletterSection = () => {
                       <FormControl>
                         <Input 
                           placeholder="First Name" 
-                          {...field} 
-                          className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#F6C026]"
+                          value={field.value || ""}
+                          onChange={field.onChange}
+                          onBlur={field.onBlur}
+                          name={field.name}
+                          ref={field.ref}
+                          disabled={field.disabled}
+                          className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#C8D5B9]"
                         />
                       </FormControl>
                       <FormMessage />
@@ -116,8 +121,13 @@ export const NewsletterSection = () => {
                       <FormControl>
                         <Input 
                           placeholder="Last Name" 
-                          {...field} 
-                          className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#F6C026]"
+                          value={field.value || ""}
+                          onChange={field.onChange}
+                          onBlur={field.onBlur}
+                          name={field.name}
+                          ref={field.ref}
+                          disabled={field.disabled}
+                          className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#C8D5B9]"
                         />
                       </FormControl>
                       <FormMessage />
@@ -136,8 +146,13 @@ export const NewsletterSection = () => {
                       <Input 
                         placeholder="Email Address" 
                         type="email" 
-                        {...field} 
-                        className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#F6C026]"
+                        value={field.value || ""}
+                        onChange={field.onChange}
+                        onBlur={field.onBlur}
+                        name={field.name}
+                        ref={field.ref}
+                        disabled={field.disabled}
+                        className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#C8D5B9]"
                       />
                     </FormControl>
                     <FormMessage />
@@ -154,12 +169,12 @@ export const NewsletterSection = () => {
                       <Checkbox
                         checked={field.value}
                         onCheckedChange={field.onChange}
-                        className="rounded text-[#F6C026] focus:ring-[#F6C026]"
+                        className="rounded text-[#005F6B] focus:ring-[#C8D5B9]"
                       />
                     </FormControl>
                     <div className="space-y-1 leading-none">
                       <FormLabel className="ml-2 text-sm text-white/80">
-                        I agree to receive emails and accept the <a href="/privacy" className="text-[#F6C026] hover:underline">Privacy Policy</a>
+                        I agree to receive emails and accept the <a href="/privacy" className="text-[#C8D5B9] hover:underline">Privacy Policy</a>
                       </FormLabel>
                       <FormMessage />
                     </div>
@@ -171,7 +186,7 @@ export const NewsletterSection = () => {
                 <Button 
                   type="submit" 
                   disabled={mutation.isPending}
-                  className="bg-[#F6C026] text-[#0F1729] px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-white transition-colors duration-300"
+                  className="bg-[#005F6B] text-white px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-colors duration-300"
                 >
                   {mutation.isPending ? "Subscribing..." : "Subscribe Now"}
                 </Button>
