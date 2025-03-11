@@ -59,25 +59,25 @@ export const SoundPacksSection = () => {
   };
   
   return (
-    <section className="py-16 bg-gradient-to-b from-[#0F1729] to-[#162447] relative">
+    <section className="py-10 md:py-16 bg-gradient-to-b from-[#0F1729] to-[#162447] relative">
       <div className="absolute inset-0 opacity-10" style={{
         backgroundImage: "radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px)",
         backgroundSize: "20px 20px"
       }}></div>
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <motion.div 
           variants={fadeIn("up")}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
-          className="text-center mb-12"
+          className="text-center mb-8 md:mb-12"
         >
-          <h2 className="text-4xl font-['Montserrat'] font-bold uppercase mb-4">
+          <h2 className="text-3xl md:text-4xl font-['Montserrat'] font-bold uppercase mb-3 md:mb-4">
             Sound <span className="text-[#C8D5B9]">Packs</span>
           </h2>
-          <div className="w-24 h-1 bg-[#005F6B] mx-auto mb-6"></div>
-          <p className="font-['Montserrat'] text-lg max-w-2xl mx-auto text-white/80">
+          <div className="w-16 md:w-24 h-1 bg-[#005F6B] mx-auto mb-4 md:mb-6"></div>
+          <p className="font-['Montserrat'] text-base md:text-lg max-w-2xl mx-auto text-white/80 px-2">
             Engineered ambient soundscapes for every environment
           </p>
         </motion.div>
@@ -87,7 +87,7 @@ export const SoundPacksSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
         >
           {SOUND_PACKS.map((pack, index) => (
             <motion.div 
@@ -95,32 +95,32 @@ export const SoundPacksSection = () => {
               variants={fadeIn("up", 0.1 * index)}
               className="bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg border border-white/10 hover:border-[#C8D5B9] transition-all duration-300 flex flex-col"
             >
-              <div className="p-6 flex-grow">
-                <div className="flex items-center mb-4">
-                  <div className="bg-[#005F6B]/30 rounded-full p-3 mr-4">
+              <div className="p-4 md:p-6 flex-grow">
+                <div className="flex items-center mb-3 md:mb-4">
+                  <div className="bg-[#005F6B]/30 rounded-full p-2 md:p-3 mr-3 md:mr-4">
                     {pack.icon}
                   </div>
-                  <h3 className="font-['Montserrat'] font-bold text-xl text-white">{pack.title}</h3>
+                  <h3 className="font-['Montserrat'] font-bold text-lg md:text-xl text-white">{pack.title}</h3>
                 </div>
                 
-                <p className="text-white/70 mb-4">{pack.description}</p>
+                <p className="text-white/70 text-sm md:text-base mb-3 md:mb-4">{pack.description}</p>
                 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-1.5 md:gap-2 mb-3 md:mb-4">
                   {pack.tags.map(tag => (
-                    <span key={tag} className="text-xs px-2 py-1 rounded-full bg-[#005F6B]/20 text-[#C8D5B9]">
+                    <span key={tag} className="text-xs px-2 py-0.5 md:py-1 rounded-full bg-[#005F6B]/20 text-[#C8D5B9]">
                       {tag}
                     </span>
                   ))}
                 </div>
                 
-                <div className="flex justify-between text-white/70 text-sm mb-4">
+                <div className="flex justify-between text-white/70 text-xs md:text-sm mb-3 md:mb-4">
                   <span>{pack.samplesCount} samples</span>
                   <span>{pack.totalDuration}</span>
                 </div>
               </div>
               
-              <div className="p-4 border-t border-white/10 flex justify-between items-center">
-                <div className="font-bold text-lg">
+              <div className="p-3 md:p-4 border-t border-white/10 flex justify-between items-center">
+                <div className="font-bold text-base md:text-lg">
                   {pack.price === "Free" ? (
                     <span className="text-[#C8D5B9]">Free</span>
                   ) : (
@@ -131,21 +131,24 @@ export const SoundPacksSection = () => {
                 <div className="flex space-x-2">
                   <button
                     onClick={() => togglePlay(pack.id)}
-                    className={`w-10 h-10 rounded-full flex items-center justify-center ${
+                    className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center ${
                       playingPack === pack.id
                         ? "bg-[#C8D5B9] text-[#0F1729]"
                         : "bg-white/10 text-white hover:bg-white/20"
                     } transition-colors duration-300`}
                     aria-label={playingPack === pack.id ? "Stop sample" : "Play sample"}
                   >
-                    {playingPack === pack.id ? <VolumeX size={18} /> : <Volume2 size={18} />}
+                    {playingPack === pack.id ? 
+                      <VolumeX size={16} className="md:w-[18px] md:h-[18px]" /> : 
+                      <Volume2 size={16} className="md:w-[18px] md:h-[18px]" />
+                    }
                   </button>
                   
                   <button 
-                    className="w-10 h-10 bg-[#005F6B] rounded-full flex items-center justify-center text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-colors duration-300"
+                    className="w-8 h-8 md:w-10 md:h-10 bg-[#005F6B] rounded-full flex items-center justify-center text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-colors duration-300"
                     aria-label="Download pack"
                   >
-                    <Download size={18} />
+                    <Download size={16} className="md:w-[18px] md:h-[18px]" />
                   </button>
                 </div>
               </div>
@@ -158,10 +161,10 @@ export const SoundPacksSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
-          className="text-center mt-12"
+          className="text-center mt-8 md:mt-12"
         >
           <button 
-            className="inline-block bg-[#005F6B] text-white px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-colors duration-300"
+            className="inline-block bg-[#005F6B] text-white px-6 md:px-8 py-2.5 md:py-3 text-sm md:text-base rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-colors duration-300"
           >
             Browse All Sound Packs
           </button>

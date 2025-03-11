@@ -22,22 +22,22 @@ export const ScienceSection = () => {
   });
 
   return (
-    <section className="py-16 bg-[#162447] relative">
+    <section className="py-10 md:py-16 bg-[#162447] relative">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=1920&q=60')] bg-cover bg-center opacity-10"></div>
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <motion.div 
           variants={fadeIn("up")}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
-          className="text-center mb-12"
+          className="text-center mb-8 md:mb-12"
         >
-          <h2 className="text-4xl font-['Montserrat'] font-bold uppercase mb-4">
+          <h2 className="text-3xl md:text-4xl font-['Montserrat'] font-bold uppercase mb-3 md:mb-4">
             The <span className="text-[#C8D5B9]">Science</span>
           </h2>
-          <div className="w-24 h-1 bg-[#005F6B] mx-auto mb-6"></div>
-          <p className="font-['Montserrat'] text-lg max-w-2xl mx-auto text-white/80">
+          <div className="w-16 md:w-24 h-1 bg-[#005F6B] mx-auto mb-4 md:mb-6"></div>
+          <p className="font-['Montserrat'] text-base md:text-lg max-w-2xl mx-auto text-white/80 px-2">
             Discover the research and data behind our scientifically optimized environments
           </p>
         </motion.div>
@@ -166,10 +166,8 @@ export const ScienceSection = () => {
               variants={fadeIn("up")}
               className="text-center pt-4"
             >
-              <Link href="/videos">
-                <a className="inline-block text-[#C8D5B9] font-['Montserrat'] font-bold hover:underline flex items-center justify-center">
-                  View All Research <ChevronRight className="ml-1" size={16} />
-                </a>
+              <Link href="/videos" className="inline-block text-[#C8D5B9] font-['Montserrat'] font-bold hover:underline flex items-center justify-center">
+                View All Research <ChevronRight className="ml-1" size={16} />
               </Link>
             </motion.div>
           </motion.div>
