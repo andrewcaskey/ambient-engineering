@@ -93,8 +93,8 @@ export const FeaturedEnvironmentsSection = () => {
                       <Settings size={14} className="mr-1" />
                       {formatDistance(new Date(environment.publishedAt), new Date(), { addSuffix: true })}
                     </span>
-                    <Link href={`/stories/${environment.id}`}>
-                      <a className="text-[#005F6B] hover:text-[#C8D5B9] transition-colors">Configure →</a>
+                    <Link href={`/stories/${environment.id}`} className="text-[#005F6B] hover:text-[#C8D5B9] transition-colors">
+                      Configure →
                     </Link>
                   </div>
                 </div>
@@ -110,10 +110,8 @@ export const FeaturedEnvironmentsSection = () => {
           viewport={{ once: true, amount: 0.25 }}
           className="text-center mt-12"
         >
-          <Link href="/stories">
-            <a className="inline-block bg-transparent border-2 border-[#005F6B] text-[#005F6B] px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#005F6B] hover:text-white transition-colors duration-300">
-              View All Environments
-            </a>
+          <Link href="/stories" className="inline-block bg-transparent border-2 border-[#005F6B] text-[#005F6B] px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#005F6B] hover:text-white transition-colors duration-300">
+            View All Environments
           </Link>
         </motion.div>
       </div>
