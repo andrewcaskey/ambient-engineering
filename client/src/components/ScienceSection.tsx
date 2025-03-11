@@ -34,11 +34,11 @@ export const ScienceSection = () => {
           className="text-center mb-8 md:mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-['Montserrat'] font-bold uppercase mb-3 md:mb-4">
-            The <span className="text-[#C8D5B9]">Science</span>
+            <span className="text-[#C8D5B9]">AmbientLab</span> Research
           </h2>
           <div className="w-16 md:w-24 h-1 bg-[#005F6B] mx-auto mb-4 md:mb-6"></div>
           <p className="font-['Montserrat'] text-base md:text-lg max-w-2xl mx-auto text-white/80 px-2">
-            Discover the research and data behind our scientifically optimized environments
+            Explore the data-driven research empowering users to scientifically optimize their environments
           </p>
         </motion.div>
         
@@ -86,7 +86,7 @@ export const ScienceSection = () => {
                   <div className="flex justify-between items-center">
                     <span className="text-[#C8D5B9] text-sm flex items-center">
                       <Microscope size={14} className="mr-1" />
-                      {featuredVideos[0].duration} • Featured Research
+                      {featuredVideos[0].duration} • AmbientLab Research
                     </span>
                     <div className="flex space-x-3">
                       <button aria-label="Share" className="text-white/70 hover:text-[#C8D5B9] transition-colors">

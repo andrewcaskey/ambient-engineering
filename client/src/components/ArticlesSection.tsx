@@ -22,9 +22,9 @@ export const ArticlesSection = () => {
           className="text-center mb-8 md:mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-['Montserrat'] font-bold uppercase mb-3 md:mb-4">
-            Latest <span className="text-[#F6C026]">Articles</span>
+            <span className="text-[#C8D5B9]">AmbientLab</span> Articles
           </h2>
-          <div className="w-16 md:w-24 h-1 bg-[#F6C026] mx-auto"></div>
+          <div className="w-16 md:w-24 h-1 bg-[#005F6B] mx-auto"></div>
         </motion.div>
         
         {isLoading ? (
@@ -60,7 +60,7 @@ export const ArticlesSection = () => {
               >
                 <div className="p-5">
                   <div className="mb-4">
-                    <span className="text-xs text-[#F6C026] uppercase font-['Montserrat'] tracking-wide">
+                    <span className="text-xs text-[#C8D5B9] uppercase font-['Montserrat'] tracking-wide">
                       {formatDistance(new Date(article.publishedAt), new Date(), { addSuffix: true })}
                     </span>
                     <h3 className="font-['Montserrat'] font-bold text-lg mt-1">{article.title}</h3>

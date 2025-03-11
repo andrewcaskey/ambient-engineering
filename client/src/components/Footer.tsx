@@ -98,14 +98,14 @@ export const Footer = () => {
                   {contactItem.type === "email" ? (
                     <a 
                       href={`mailto:${contactItem.value}`} 
-                      className="text-white/70 hover:text-[#F6C026] transition-colors"
+                      className="text-white/70 hover:text-[#C8D5B9] transition-colors"
                     >
                       {contactItem.value}
                     </a>
                   ) : contactItem.type === "phone" ? (
                     <a 
                       href={`tel:${contactItem.value.replace(/[^0-9+]/g, '')}`} 
-                      className="text-white/70 hover:text-[#F6C026] transition-colors"
+                      className="text-white/70 hover:text-[#C8D5B9] transition-colors"
                     >
                       {contactItem.value}
                     </a>
@@ -123,7 +123,7 @@ export const Footer = () => {
           <p>&copy; {COMPANY_INFO.copyrightYear} {COMPANY_INFO.name}. All rights reserved.</p>
           <div className="flex justify-center space-x-4 mt-2">
             {COMPANY_INFO.policies.map((policy) => (
-              <Link key={policy.path} href={policy.path} className="hover:text-[#F6C026] transition-colors">
+              <Link key={policy.path} href={policy.path} className="hover:text-[#C8D5B9] transition-colors">
                 {policy.name}
               </Link>
             ))}
