@@ -171,18 +171,27 @@ export const HeroSection = () => {
             variants={fadeIn("up", 0.3)}
             initial="hidden"
             animate="show"
-            className="text-4xl sm:text-5xl md:text-7xl font-['Montserrat'] font-black uppercase mb-4 md:mb-6 tracking-wide text-white drop-shadow-lg"
+            className="text-4xl sm:text-5xl md:text-7xl font-['Montserrat'] font-black mb-4 md:mb-6 tracking-wide text-white drop-shadow-lg"
           >
-            Engineer Your <span className="text-[#C8D5B9]">Perfect</span> Environment
+            <span className="text-white">Ambient</span><span className="text-[#C8D5B9]">Lab</span>
           </motion.h1>
           
           <motion.p 
             variants={fadeIn("up", 0.4)}
             initial="hidden"
             animate="show"
-            className="font-['Montserrat'] text-base sm:text-xl md:text-2xl max-w-2xl mx-auto mb-6 md:mb-8 text-white/90 px-4"
+            className="font-['Montserrat'] text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto mb-4 text-white/90 px-4"
           >
-            Scientifically optimize your spaces for enhanced wellbeing, productivity, and mood regulation
+            Engineer Your Perfect Environment
+          </motion.p>
+          
+          <motion.p 
+            variants={fadeIn("up", 0.45)}
+            initial="hidden"
+            animate="show"
+            className="font-['Inter'] text-base sm:text-lg max-w-xl mx-auto mb-8 text-white/80 px-4"
+          >
+            Transform any space into a precisely calibrated atmosphere that supports your specific mental and emotional needs
           </motion.p>
           
           <motion.div 
@@ -195,7 +204,7 @@ export const HeroSection = () => {
               Download App
             </a>
             <a href="#" className="border-2 border-[#C8D5B9] text-[#C8D5B9] bg-transparent px-6 sm:px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-colors duration-300 text-sm sm:text-base text-center">
-              Download Free Packs
+              Download Sound Packs
             </a>
           </motion.div>
         </motion.div>

@@ -37,7 +37,7 @@ export const Footer = () => {
           {/* Company info */}
           <div>
             <h3 className="text-2xl font-['Montserrat'] font-bold mb-4">
-              NOCTURNAL <span className="text-[#F6C026]">NARRATIVES</span>
+              <span className="text-white">Ambient</span><span className="text-[#C8D5B9]">Lab</span>
             </h3>
             <p className="text-white/70 mb-6">
               {COMPANY_INFO.description}
@@ -50,7 +50,7 @@ export const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.name}
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#F6C026] transition-colors"
+                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#C8D5B9] transition-colors"
                 >
                   {getSocialIcon(social.icon)}
                 </a>
@@ -64,7 +64,7 @@ export const Footer = () => {
             <ul className="space-y-2">
               {FOOTER_LINKS.quickLinks.map((link) => (
                 <li key={link.path}>
-                  <Link href={link.path} className="text-white/70 hover:text-[#F6C026] transition-colors">
+                  <Link href={link.path} className="text-white/70 hover:text-[#C8D5B9] transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -78,7 +78,7 @@ export const Footer = () => {
             <ul className="space-y-2">
               {FOOTER_LINKS.categories.map((category) => (
                 <li key={category.path}>
-                  <Link href={category.path} className="text-white/70 hover:text-[#F6C026] transition-colors">
+                  <Link href={category.path} className="text-white/70 hover:text-[#C8D5B9] transition-colors">
                     {category.name}
                   </Link>
                 </li>
