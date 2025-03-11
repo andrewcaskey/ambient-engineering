@@ -30,19 +30,35 @@ export const HeroSection = () => {
   }, []);
   
   const calculateParallax = (depth: number) => {
-    const x = mousePosition.x * depth * -15; // Inverse movement for parallax effect
-    const y = mousePosition.y * depth * -15;
-    const scrollY = scrollPosition * 0.2;
-    return `translate(${x}px, ${y - scrollY}px)`;
+    // Check if the device has a small viewport (likely mobile)
+    const isMobile = window.innerWidth < 768;
+    
+    // On mobile, use minimal or no parallax to avoid performance issues
+    if (isMobile) {
+      const scrollY = scrollPosition * 0.05; // Reduced parallax effect for scrolling
+      return `translateY(${-scrollY}px)`;
+    } else {
+      const x = mousePosition.x * depth * -15; // Inverse movement for parallax effect
+      const y = mousePosition.y * depth * -15;
+      const scrollY = scrollPosition * 0.2;
+      return `translate(${x}px, ${y - scrollY}px)`;
+    }
   };
   
+  // Determine if we're on mobile
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  
+  // Use fewer particles on mobile for better performance
+  const particleCount = isMobile ? 3 : 6;
+  const geoCount = isMobile ? 4 : 8;
+
   return (
-    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden will-change-transform">
       <div className="absolute inset-0 bg-gradient-to-b from-[#0F172940] to-[#0F1729] z-10"></div>
       
       {/* Interactive ambient background */}
       <div className="absolute inset-0 z-0">
-        <StarryBackground numStars={200} />
+        <StarryBackground numStars={isMobile ? 100 : 200} />
         
         {/* Floating particles */}
         <motion.div
@@ -51,10 +67,10 @@ export const HeroSection = () => {
           animate={{ opacity: 0.8 }}
           transition={{ duration: 2 }}
         >
-          {[...Array(6)].map((_, index) => (
+          {[...Array(particleCount)].map((_, index) => (
             <motion.div
               key={`particle-${index}`}
-              className="absolute rounded-full bg-[#C8D5B9] blur-xl"
+              className="absolute rounded-full bg-[#C8D5B9] blur-xl will-change-transform"
               style={{
                 width: `${Math.random() * 100 + 100}px`,
                 height: `${Math.random() * 100 + 100}px`,
@@ -73,10 +89,10 @@ export const HeroSection = () => {
         
         {/* Geometric elements */}
         <div className="absolute inset-0">
-          {[...Array(8)].map((_, index) => (
+          {[...Array(geoCount)].map((_, index) => (
             <motion.div
               key={`geo-${index}`}
-              className="absolute border border-[#005F6B] rounded-lg"
+              className="absolute border border-[#005F6B] rounded-lg will-change-transform"
               style={{
                 width: `${Math.random() * 150 + 50}px`,
                 height: `${Math.random() * 150 + 50}px`,

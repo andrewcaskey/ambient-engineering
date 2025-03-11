@@ -11,20 +11,20 @@ export const GallerySection = () => {
   });
 
   return (
-    <section className="py-16 bg-[#0F1729] relative">
-      <div className="container mx-auto px-4">
+    <section className="py-10 md:py-16 bg-[#0F1729] relative will-change-transform">
+      <div className="container mx-auto px-4 md:px-6">
         <motion.div 
           variants={fadeIn("up")}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
-          className="text-center mb-12"
+          className="text-center mb-8 md:mb-12"
         >
-          <h2 className="text-4xl font-['Montserrat'] font-bold uppercase mb-4">
+          <h2 className="text-3xl md:text-4xl font-['Montserrat'] font-bold uppercase mb-3 md:mb-4">
             Magical <span className="text-[#F6C026]">Gallery</span>
           </h2>
-          <div className="w-24 h-1 bg-[#F6C026] mx-auto mb-6"></div>
-          <p className="font-['Playfair_Display'] text-lg max-w-2xl mx-auto text-white/80">
+          <div className="w-16 md:w-24 h-1 bg-[#F6C026] mx-auto mb-4 md:mb-6"></div>
+          <p className="font-['Playfair_Display'] text-base md:text-lg max-w-2xl mx-auto text-white/80 px-2">
             Explore enchanting visuals from our nature-themed universe
           </p>
         </motion.div>
@@ -76,10 +76,8 @@ export const GallerySection = () => {
           viewport={{ once: true, amount: 0.25 }}
           className="text-center mt-10"
         >
-          <Link href="/gallery">
-            <a className="inline-block bg-transparent border-2 border-white text-white px-6 py-2 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-white hover:text-[#0F1729] transition-colors duration-300">
-              View Full Gallery
-            </a>
+          <Link href="/gallery" className="inline-block bg-transparent border-2 border-white text-white px-6 py-2 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-white hover:text-[#0F1729] transition-colors duration-300">
+            View Full Gallery
           </Link>
         </motion.div>
       </div>
