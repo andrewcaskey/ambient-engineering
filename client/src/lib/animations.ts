@@ -101,13 +101,14 @@ export const floatAnimation: Variants = {
 };
 
 export const twinkleAnimation: Variants = {
-  hidden: { opacity: 0.4 },
+  hidden: { opacity: 0.3 },
   twinkle: {
-    opacity: [0.4, 1, 0.4],
+    opacity: [0.3, 0.7, 0.3], // More subtle opacity changes
+    scale: [1, 1.05, 1], // Very subtle scale change
     transition: {
-      duration: 2,
+      duration: 4, // Slower animation
       repeat: Infinity,
-      repeatType: "reverse",
+      repeatType: "loop",
       ease: "easeInOut"
     }
   }

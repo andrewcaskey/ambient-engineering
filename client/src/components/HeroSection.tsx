@@ -2,109 +2,159 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { fadeIn, floatAnimation, twinkleAnimation } from "@/lib/animations";
 import { StarryBackground } from "@/components/ui/starry-background";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo, useCallback } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [scrollPosition, setScrollPosition] = useState(0);
+  const isMobile = useIsMobile();
+  
+  // Use fewer particles on mobile for better performance
+  const particleCount = useMemo(() => isMobile ? 2 : 4, [isMobile]);
+  const geoCount = useMemo(() => isMobile ? 3 : 6, [isMobile]);
+  
+  // Generate static elements only once on component mount
+  const particles = useMemo(() => {
+    return [...Array(particleCount)].map((_, index) => ({
+      id: index,
+      width: Math.random() * 80 + 80, // Slightly smaller
+      height: Math.random() * 80 + 80, // Slightly smaller
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      opacity: 0.08 + Math.random() * 0.15, // Less opacity
+      depth: index * 0.2 + 0.5
+    }));
+  }, [particleCount]);
+  
+  const geoElements = useMemo(() => {
+    return [...Array(geoCount)].map((_, index) => ({
+      id: index,
+      width: Math.random() * 120 + 40,
+      height: Math.random() * 120 + 40,
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      opacity: 0.08 + Math.random() * 0.15, // Less opacity
+      rotation: Math.random() * 45,
+      borderWidth: Math.random() > 0.5 ? 1 : 2,
+      depth: index * 0.15 + 0.3
+    }));
+  }, [geoCount]);
+  
+  // Debounced mouse move handler
+  const handleMouseMove = useCallback((e: MouseEvent) => {
+    // Skip movement calculation on mobile for performance
+    if (isMobile) return;
+    
+    // Only update if mouse has moved significantly
+    setMousePosition(prev => {
+      const newX = e.clientX / window.innerWidth;
+      const newY = e.clientY / window.innerHeight;
+      if (Math.abs(newX - prev.x) > 0.01 || Math.abs(newY - prev.y) > 0.01) {
+        return { x: newX, y: newY };
+      }
+      return prev;
+    });
+  }, [isMobile]);
+  
+  // Throttled scroll handler
+  const handleScroll = useCallback(() => {
+    // Only update if scroll position has changed significantly
+    setScrollPosition(prev => {
+      const current = window.scrollY;
+      if (Math.abs(current - prev) > 5) {
+        return current;
+      }
+      return prev;
+    });
+  }, []);
   
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: e.clientX / window.innerWidth,
-        y: e.clientY / window.innerHeight
-      });
-    };
-    
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
-    
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('scroll', handleScroll);
+    // Add events with passive option for better performance
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    window.addEventListener('scroll', handleScroll, { passive: true });
     
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [handleMouseMove, handleScroll]);
   
-  const calculateParallax = (depth: number) => {
-    // Check if the device has a small viewport (likely mobile)
-    const isMobile = window.innerWidth < 768;
-    
-    // On mobile, use minimal or no parallax to avoid performance issues
+  const calculateParallax = useCallback((depth: number) => {
+    // On mobile, minimize parallax effects
     if (isMobile) {
-      const scrollY = scrollPosition * 0.05; // Reduced parallax effect for scrolling
+      const scrollY = scrollPosition * 0.02; // Further reduced parallax for mobile
       return `translateY(${-scrollY}px)`;
     } else {
-      const x = mousePosition.x * depth * -15; // Inverse movement for parallax effect
-      const y = mousePosition.y * depth * -15;
-      const scrollY = scrollPosition * 0.2;
-      return `translate(${x}px, ${y - scrollY}px)`;
+      const x = mousePosition.x * depth * -10; // Reduced movement
+      const y = mousePosition.y * depth * -10; // Reduced movement
+      const scrollY = scrollPosition * 0.1; // Reduced scroll effect
+      return `translate3d(${x}px, ${y - scrollY}px, 0)`;
     }
-  };
-  
-  // Determine if we're on mobile
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-  
-  // Use fewer particles on mobile for better performance
-  const particleCount = isMobile ? 3 : 6;
-  const geoCount = isMobile ? 4 : 8;
+  }, [isMobile, mousePosition.x, mousePosition.y, scrollPosition]);
 
   return (
-    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden will-change-transform">
+    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#0F172940] to-[#0F1729] z-10"></div>
       
       {/* Interactive ambient background */}
       <div className="absolute inset-0 z-0">
-        <StarryBackground numStars={isMobile ? 100 : 200} />
+        <StarryBackground numStars={isMobile ? 75 : 150} />
         
-        {/* Floating particles */}
+        {/* Floating particles - simplified for mobile */}
         <motion.div
           className="absolute w-full h-full"
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.8 }}
           transition={{ duration: 2 }}
         >
-          {[...Array(particleCount)].map((_, index) => (
+          {particles.map((particle) => (
             <motion.div
-              key={`particle-${index}`}
-              className="absolute rounded-full bg-[#C8D5B9] blur-xl will-change-transform"
+              key={`particle-${particle.id}`}
+              className="absolute rounded-full bg-[#C8D5B9] blur-xl"
               style={{
-                width: `${Math.random() * 100 + 100}px`,
-                height: `${Math.random() * 100 + 100}px`,
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                opacity: 0.1 + Math.random() * 0.2,
-                transform: calculateParallax(index * 0.2 + 0.5)
+                width: `${particle.width}px`,
+                height: `${particle.height}px`,
+                left: `${particle.left}%`,
+                top: `${particle.top}%`,
+                opacity: particle.opacity,
+                transform: calculateParallax(particle.depth),
+                willChange: 'transform, opacity',
+                backfaceVisibility: 'hidden'
               }}
               variants={twinkleAnimation}
               initial="hidden"
-              animate="show"
-              custom={index * 0.2}
+              animate="twinkle"
+              transition={{
+                delay: particle.id * 0.5,
+                duration: 5,
+                repeat: Infinity,
+                repeatType: "loop"
+              }}
             />
           ))}
         </motion.div>
         
-        {/* Geometric elements */}
+        {/* Geometric elements - simplified for mobile */}
         <div className="absolute inset-0">
-          {[...Array(geoCount)].map((_, index) => (
+          {geoElements.map((geo) => (
             <motion.div
-              key={`geo-${index}`}
-              className="absolute border border-[#005F6B] rounded-lg will-change-transform"
+              key={`geo-${geo.id}`}
+              className="absolute border border-[#005F6B] rounded-lg"
               style={{
-                width: `${Math.random() * 150 + 50}px`,
-                height: `${Math.random() * 150 + 50}px`,
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                opacity: 0.1 + Math.random() * 0.2,
-                transform: `${calculateParallax(index * 0.15 + 0.3)} rotate(${Math.random() * 45}deg)`,
-                borderWidth: `${Math.random() > 0.5 ? 1 : 2}px`
+                width: `${geo.width}px`,
+                height: `${geo.height}px`,
+                left: `${geo.left}%`,
+                top: `${geo.top}%`,
+                opacity: geo.opacity,
+                transform: `${calculateParallax(geo.depth)} rotate(${geo.rotation}deg)`,
+                borderWidth: `${geo.borderWidth}px`,
+                willChange: 'transform, opacity',
+                backfaceVisibility: 'hidden'
               }}
               initial={{ opacity: 0 }}
-              animate={{ opacity: 0.1 + Math.random() * 0.2 }}
-              transition={{ duration: 1 + Math.random() * 2 }}
+              animate={{ opacity: geo.opacity }}
+              transition={{ duration: 1.5 }}
             />
           ))}
         </div>
