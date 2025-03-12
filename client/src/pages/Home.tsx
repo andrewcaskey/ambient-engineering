@@ -3,7 +3,6 @@ import Navbar from "@/components/Navbar";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import HeroSection from "@/components/HeroSection";
 import FeaturedEnvironmentsSection from "@/components/FeaturedEnvironmentsSection";
-import ScienceSection from "@/components/ScienceSection";
 import PodcastSection from "@/components/PodcastSection";
 import SoundPacksSection from "@/components/SoundPacksSection";
 import ArticlesSection from "@/components/ArticlesSection";
@@ -23,7 +22,6 @@ export default function Home() {
         <HeroSection />
         <FeaturedEnvironmentsSection />
         <SoundPacksSection />
-        <ScienceSection />
         <PodcastSection />
         <ArticlesSection />
         <GallerySection />
