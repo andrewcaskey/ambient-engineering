@@ -4,6 +4,8 @@ import { fadeIn, floatAnimation, twinkleAnimation } from "@/lib/animations";
 import { StarryBackground } from "@/components/ui/starry-background";
 import { useEffect, useState, useMemo, useCallback } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { SOCIAL_LINKS } from "@/lib/constants";
+import { Headphones, Instagram, Twitter, Youtube } from "lucide-react";
 
 export const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -97,6 +99,25 @@ export const HeroSection = () => {
     <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#0F172940] to-[#0F1729] z-10"></div>
       
+      {/* Social media links at the top */}
+      <div className="absolute top-4 right-4 md:top-8 md:right-8 z-30 flex space-x-4">
+        {SOCIAL_LINKS.map((social) => (
+          <a 
+            key={social.name}
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={social.name}
+            className="text-white hover:text-[#C8D5B9] transition-all duration-300 hover:scale-110 transform"
+          >
+            {social.icon === "Instagram" && <Instagram className="h-5 w-5 md:h-6 md:w-6" />}
+            {social.icon === "Twitter" && <Twitter className="h-5 w-5 md:h-6 md:w-6" />}
+            {social.icon === "Youtube" && <Youtube className="h-5 w-5 md:h-6 md:w-6" />}
+            {social.icon === "Music" && <Headphones className="h-5 w-5 md:h-6 md:w-6" />}
+          </a>
+        ))}
+      </div>
+      
       {/* Interactive ambient background */}
       <div className="absolute inset-0 z-0">
         <StarryBackground numStars={isMobile ? 75 : 150} />
@@ -171,7 +192,7 @@ export const HeroSection = () => {
             variants={fadeIn("up", 0.3)}
             initial="hidden"
             animate="show"
-            className="text-4xl sm:text-5xl md:text-7xl font-['Montserrat'] font-black mb-4 md:mb-6 tracking-wide text-white drop-shadow-lg"
+            className="text-4xl sm:text-5xl md:text-7xl font-['Montserrat'] font-black mb-2 md:mb-4 tracking-wide text-white drop-shadow-lg"
           >
             <span className="text-white">Ambient</span><span className="text-[#C8D5B9]">Lab</span>
           </motion.h1>
@@ -180,10 +201,19 @@ export const HeroSection = () => {
             variants={fadeIn("up", 0.4)}
             initial="hidden"
             animate="show"
-            className="font-['Montserrat'] text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto mb-4 text-white/90 px-4"
+            className="font-['Montserrat'] text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto mb-2 text-white/90 px-4"
           >
             Engineer Your Perfect Environment
           </motion.p>
+          
+          <motion.div
+            variants={fadeIn("up", 0.42)}
+            initial="hidden"
+            animate="show"
+            className="flex justify-center mb-4"
+          >
+            <div className="h-1 w-20 bg-[#005F6B] rounded-full"></div>
+          </motion.div>
           
           <motion.p 
             variants={fadeIn("up", 0.45)}
@@ -200,12 +230,25 @@ export const HeroSection = () => {
             animate="show"
             className="flex flex-col sm:flex-row justify-center gap-4"
           >
-            <a href="#" className="bg-[#005F6B] text-white px-6 sm:px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-colors duration-300 text-sm sm:text-base text-center">
-              Download App
+            <a href="#newsletter" className="bg-[#005F6B] text-white px-6 sm:px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 text-sm sm:text-base text-center transform hover:scale-105 shadow-lg">
+              Join Waitlist
             </a>
-            <a href="#" className="border-2 border-[#C8D5B9] text-[#C8D5B9] bg-transparent px-6 sm:px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-colors duration-300 text-sm sm:text-base text-center">
-              Download Sound Packs
+            <a href="#sound-packs" className="bg-transparent backdrop-blur-md border border-[#C8D5B9] text-[#C8D5B9] px-6 sm:px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 text-sm sm:text-base text-center transform hover:scale-105 shadow-lg">
+              Free Sound Packs
             </a>
+          </motion.div>
+          
+          {/* Badge */}
+          <motion.div
+            variants={fadeIn("up", 0.6)}
+            initial="hidden"
+            animate="show" 
+            className="mt-10 inline-block"
+          >
+            <div className="bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-xs text-white/80 border border-white/20 flex items-center space-x-2">
+              <span className="inline-block w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+              <span>LAUNCHING SOON</span>
+            </div>
           </motion.div>
         </motion.div>
       </div>

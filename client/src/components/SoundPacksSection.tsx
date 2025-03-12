@@ -59,7 +59,7 @@ export const SoundPacksSection = () => {
   };
   
   return (
-    <section className="py-10 md:py-16 bg-gradient-to-b from-[#0F1729] to-[#162447] relative">
+    <section id="sound-packs" className="py-10 md:py-16 bg-gradient-to-b from-[#0F1729] to-[#162447] relative">
       <div className="absolute inset-0 opacity-10" style={{
         backgroundImage: "radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px)",
         backgroundSize: "20px 20px"
