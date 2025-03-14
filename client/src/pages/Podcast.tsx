@@ -16,8 +16,8 @@ export default function Podcast() {
             animate="show"
             className="text-center mb-12"
           >
-            <h1 className="text-5xl font-heading font-bold uppercase mb-4">
-              <span className="text-[#C8D5B9]">AmbientLab</span> Podcasts
+            <h1 className="text-5xl font-heading font-bold mb-4">
+              <span className="text-[#C8D5B9] font-sans italic tracking-wide">ambient<span className="text-[#C8D5B9]">lab</span></span> podcasts
             </h1>
             <div className="w-24 h-1 bg-[#005F6B] mx-auto mb-6"></div>
             <p className="font-sans text-xl max-w-2xl mx-auto text-white/80">
@@ -34,7 +34,7 @@ export default function Podcast() {
             className="max-w-4xl mx-auto mt-16 text-center"
           >
             <h2 className="text-3xl font-heading font-bold mb-6">
-              Why Listen to <span className="text-[#005F6B]">AmbientLab</span> Podcasts?
+              Why Listen to <span className="text-[#005F6B] font-sans italic tracking-wide">ambient<span className="text-[#005F6B]">lab</span></span> podcasts?
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">

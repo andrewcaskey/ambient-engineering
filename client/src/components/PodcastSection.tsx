@@ -184,8 +184,8 @@ export const PodcastSection = () => {
           viewport={{ once: true, amount: 0.25 }}
           className="text-center mb-8 md:mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-heading font-bold uppercase mb-3 md:mb-4">
-            <span className="text-[#C8D5B9]">AmbientLab</span> Podcasts
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-3 md:mb-4">
+            <span className="text-[#C8D5B9] font-sans italic tracking-wide">ambient<span className="text-[#C8D5B9]">lab</span></span> podcasts
           </h2>
           <div className="w-16 md:w-24 h-1 bg-[#005F6B] mx-auto mb-4 md:mb-6"></div>
           <p className="font-sans text-base md:text-lg max-w-2xl mx-auto text-white/80 px-2">
@@ -196,21 +196,21 @@ export const PodcastSection = () => {
         <div id="audio-container" className="hidden"></div>
         
         {loading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+          <div className="grid grid-cols-1 gap-8 md:gap-12 max-w-4xl mx-auto">
             {[1, 2, 3, 4].map((n) => (
               <div key={n} className="bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg border border-white/10 animate-pulse">
-                <div className="p-4 md:p-6">
-                  <div className="flex items-center mb-3 md:mb-4">
-                    <div className="rounded-full bg-white/10 h-8 w-8 md:h-12 md:w-12 mr-3 md:mr-4"></div>
+                <div className="p-6 md:p-8">
+                  <div className="flex items-center mb-4 md:mb-6">
+                    <div className="rounded-full bg-white/10 h-12 w-12 md:h-16 md:w-16 mr-4 md:mr-6"></div>
                     <div className="w-3/4">
-                      <div className="h-4 md:h-5 bg-white/10 rounded mb-1 md:mb-2"></div>
-                      <div className="h-3 md:h-4 bg-white/10 rounded w-1/2"></div>
+                      <div className="h-6 md:h-7 bg-white/10 rounded mb-2 md:mb-3"></div>
+                      <div className="h-4 md:h-5 bg-white/10 rounded w-1/2"></div>
                     </div>
                   </div>
-                  <div className="h-12 md:h-16 bg-white/10 rounded mb-3 md:mb-4"></div>
+                  <div className="h-16 md:h-20 bg-white/10 rounded mb-5 md:mb-6"></div>
                   <div className="flex justify-between items-center">
-                    <div className="h-3 md:h-4 w-16 md:w-20 bg-white/10 rounded"></div>
-                    <div className="h-6 w-6 md:h-8 md:w-8 bg-white/10 rounded-full"></div>
+                    <div className="h-4 md:h-5 w-24 md:w-32 bg-white/10 rounded"></div>
+                    <div className="h-12 w-12 md:h-14 md:w-14 bg-white/10 rounded-full"></div>
                   </div>
                 </div>
               </div>
@@ -226,7 +226,7 @@ export const PodcastSection = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8"
+            className="grid grid-cols-1 gap-8 md:gap-12 max-w-4xl mx-auto"
           >
             {podcasts.map((podcast, index) => (
               <motion.div 
@@ -234,23 +234,23 @@ export const PodcastSection = () => {
                 variants={fadeIn("up", 0.1 * index)}
                 className="bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg border border-white/10 hover:border-[#C8D5B9] transition-all duration-300"
               >
-                <div className="p-4 md:p-6">
-                  <div className="flex items-start mb-3 md:mb-4">
-                    <div className="flex-shrink-0 mr-3 md:mr-4">
-                      <div className="bg-[#005F6B]/30 rounded-full p-2 md:p-3">
-                        <Headphones className="h-4 w-4 md:h-6 md:w-6 text-[#C8D5B9]" />
+                <div className="p-6 md:p-8">
+                  <div className="flex items-start mb-4 md:mb-6">
+                    <div className="flex-shrink-0 mr-4 md:mr-6">
+                      <div className="bg-[#005F6B]/30 rounded-full p-3 md:p-4">
+                        <Headphones className="h-6 w-6 md:h-8 md:w-8 text-[#C8D5B9]" />
                       </div>
                     </div>
                     <div>
-                      <h3 className="font-heading font-bold text-base md:text-xl text-white mb-0.5 md:mb-1 line-clamp-1">{podcast.title}</h3>
-                      <div className="flex flex-col sm:flex-row sm:items-center text-white/60 text-xs md:text-sm sm:space-x-4">
+                      <h3 className="font-heading font-bold text-xl md:text-2xl text-white mb-1 md:mb-2">{podcast.title}</h3>
+                      <div className="flex flex-col sm:flex-row sm:items-center text-white/60 text-sm md:text-base sm:space-x-6">
                         <span className="flex items-center mb-1 sm:mb-0">
-                          <Calendar size={12} className="mr-1 md:mr-1 md:w-[14px] md:h-[14px]" />
+                          <Calendar size={16} className="mr-2 md:w-[18px] md:h-[18px]" />
                           {formatDate(podcast.pubDate)}
                         </span>
                         {podcast.itunes?.duration && (
                           <span className="flex items-center">
-                            <Clock size={12} className="mr-1 md:mr-1 md:w-[14px] md:h-[14px]" />
+                            <Clock size={16} className="mr-2 md:w-[18px] md:h-[18px]" />
                             {podcast.itunes.duration}
                           </span>
                         )}
@@ -258,7 +258,7 @@ export const PodcastSection = () => {
                     </div>
                   </div>
                   
-                  <p className="text-white/70 text-sm md:text-base mb-3 md:mb-4 line-clamp-2">
+                  <p className="text-white/70 text-base md:text-lg mb-5 md:mb-6 line-clamp-3">
                     {podcast.contentSnippet || podcast.itunes?.summary || "Enjoy this ambient sound podcast episode."}
                   </p>
                   
@@ -267,13 +267,13 @@ export const PodcastSection = () => {
                       href={podcast.link} 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#C8D5B9] hover:underline text-xs md:text-sm"
+                      className="text-[#C8D5B9] hover:underline text-sm md:text-base font-medium"
                     >
                       View Episode
                     </a>
                     <button
                       onClick={() => podcast.enclosure && togglePlay(podcast.enclosure.url)}
-                      className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center ${
+                      className={`w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center ${
                         currentAudio === podcast.enclosure?.url && isPlaying
                           ? "bg-[#C8D5B9] text-[#0F1729]"
                           : "bg-[#005F6B] text-white"
@@ -281,9 +281,9 @@ export const PodcastSection = () => {
                       aria-label={currentAudio === podcast.enclosure?.url && isPlaying ? "Pause" : "Play"}
                     >
                       {currentAudio === podcast.enclosure?.url && isPlaying ? (
-                        <Volume2 size={16} className="md:w-[18px] md:h-[18px]" />
+                        <Volume2 size={22} className="md:w-6 md:h-6" />
                       ) : (
-                        <Play size={16} className="ml-0.5 md:w-[18px] md:h-[18px]" />
+                        <Play size={22} className="ml-1 md:w-6 md:h-6" />
                       )}
                     </button>
                   </div>

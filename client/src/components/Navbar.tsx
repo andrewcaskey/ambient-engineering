@@ -18,11 +18,11 @@ export const Navbar = () => {
         <div className="hidden md:flex justify-between items-center">
           {/* Logo - Left */}
           <div className="flex-1 flex justify-start items-center">
-            <a href="/" className="text-2xl font-['Montserrat'] font-bold tracking-wider flex items-center">
+            <a href="/" className="text-2xl font-sans italic tracking-wide flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-[#C8D5B9]">
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
               </svg>
-              <span>AMBIENT <span className="text-[#C8D5B9]">ENGINEERING</span></span>
+              <span>ambient<span className="text-[#C8D5B9]">lab</span></span>
             </a>
           </div>
           
@@ -112,11 +112,11 @@ export const Navbar = () => {
         <div className="flex md:hidden justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="text-xl font-['Montserrat'] font-bold tracking-wider flex items-center">
+            <a href="/" className="text-xl font-sans italic tracking-wide flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-[#C8D5B9]">
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
               </svg>
-              <span>AMBIENT <span className="text-[#C8D5B9]">ENGINEERING</span></span>
+              <span>ambient<span className="text-[#C8D5B9]">lab</span></span>
             </a>
           </div>
           
