@@ -3,7 +3,7 @@ export const APP_NAME = "AmbientLab";
 export const NAVIGATION_LINKS = [
   { name: "Home", path: "/" },
   { name: "Experience", path: "/stories" },
-  { name: "Science", path: "/videos" },
+  { name: "Podcast", path: "/podcast" },
   { name: "Gallery", path: "/gallery" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" }
@@ -35,7 +35,7 @@ export const FOOTER_LINKS = {
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Experience", path: "/stories" },
-    { name: "Science", path: "/videos" },
+    { name: "Podcast", path: "/podcast" },
     { name: "Gallery", path: "/gallery" },
     { name: "Contact", path: "/contact" }
   ],
