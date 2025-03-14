@@ -56,7 +56,7 @@ export const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.name}
-                className="flex items-center justify-center h-10 w-10 rounded-full bg-[#005F6B]/20 text-white hover:bg-[#005F6B]/40 hover:text-[#C8D5B9] transition-all duration-300 hover:scale-110 transform border border-white/10 hover:border-[#C8D5B9]/50"
+                className="flex items-center justify-center h-10 w-10 rounded-full bg-[#005F6B] text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 hover:scale-110 transform border border-white/20 hover:border-[#C8D5B9]"
               >
                 {getLucideIcon(social.icon)}
               </a>
@@ -125,7 +125,7 @@ export const Navbar = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.name}
-                    className="flex items-center justify-center h-12 w-12 rounded-full bg-[#005F6B]/20 text-white hover:bg-[#005F6B]/40 hover:text-[#C8D5B9] transition-all duration-300 hover:scale-110 transform border border-white/10 hover:border-[#C8D5B9]/50"
+                    className="flex items-center justify-center h-12 w-12 rounded-full bg-[#005F6B] text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 hover:scale-110 transform border border-white/20 hover:border-[#C8D5B9]"
                   >
                     {getLucideIcon(social.icon)}
                   </a>
