@@ -26,12 +26,12 @@ export default function Videos() {
             animate="show"
             className="text-center mb-12"
           >
-            <h1 className="text-5xl font-['Montserrat'] font-bold uppercase mb-4">
-              Video <span className="text-[#F6C026]">Stories</span>
+            <h1 className="text-5xl font-heading font-bold uppercase mb-4">
+              Sound <span className="text-[#005F6B]">Science</span>
             </h1>
-            <div className="w-24 h-1 bg-[#F6C026] mx-auto mb-6"></div>
-            <p className="font-['Playfair_Display'] text-xl max-w-2xl mx-auto text-white/80">
-              Experience our enchanting tales through immersive visual storytelling
+            <div className="w-24 h-1 bg-[#005F6B] mx-auto mb-6"></div>
+            <p className="font-sans text-xl max-w-2xl mx-auto text-white/80">
+              Discover the science behind our optimized ambient environments
             </p>
           </motion.div>
           
@@ -60,7 +60,7 @@ export default function Videos() {
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <button 
-                    className="w-24 h-24 bg-[#F6C026] rounded-full flex items-center justify-center transition-transform hover:scale-110"
+                    className="w-24 h-24 bg-[#005F6B] rounded-full flex items-center justify-center transition-transform hover:scale-110"
                     aria-label="Play video"
                   >
                     <Play className="h-10 w-10 text-[#0F1729] ml-1" />
@@ -70,8 +70,8 @@ export default function Videos() {
                 <div className="absolute bottom-0 left-0 p-6">
                   <h2 className="text-3xl font-['Montserrat'] font-bold mb-2 text-white">{featuredVideo.title}</h2>
                   <div className="flex items-center mb-4">
-                    <Clock size={16} className="text-[#F6C026] mr-2" />
-                    <span className="text-[#F6C026]">{featuredVideo.duration} • Featured Release</span>
+                    <Clock size={16} className="text-[#C8D5B9] mr-2" />
+                    <span className="text-[#C8D5B9]">{featuredVideo.duration} • Featured Release</span>
                   </div>
                   <p className="text-white/90 max-w-2xl text-lg">{featuredVideo.description}</p>
                 </div>
@@ -80,8 +80,8 @@ export default function Videos() {
           ) : null}
           
           {/* Video grid */}
-          <h2 className="text-2xl font-['Montserrat'] font-bold mb-6 border-b border-white/10 pb-2">
-            All Videos
+          <h2 className="text-2xl font-heading font-bold mb-6 border-b border-white/10 pb-2">
+            All Research Videos
           </h2>
           
           {isLoading ? (
@@ -117,7 +117,7 @@ export default function Videos() {
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
                       <div className="absolute inset-0 bg-black/50"></div>
                       <button 
-                        className="relative z-10 w-16 h-16 bg-[#F6C026] rounded-full flex items-center justify-center transition-transform hover:scale-110"
+                        className="relative z-10 w-16 h-16 bg-[#005F6B] rounded-full flex items-center justify-center transition-transform hover:scale-110"
                         aria-label="Play video"
                       >
                         <Play className="h-6 w-6 text-[#0F1729] ml-1" />

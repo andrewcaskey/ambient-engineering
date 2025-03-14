@@ -44,12 +44,12 @@ export default function Stories() {
             animate="show"
             className="text-center mb-12"
           >
-            <h1 className="text-5xl font-['Montserrat'] font-bold uppercase mb-4">
-              Bedtime <span className="text-[#F6C026]">Stories</span>
+            <h1 className="text-5xl font-heading font-bold uppercase mb-4">
+              Ambient <span className="text-[#005F6B]">Experiences</span>
             </h1>
-            <div className="w-24 h-1 bg-[#F6C026] mx-auto mb-6"></div>
-            <p className="font-['Playfair_Display'] text-xl max-w-2xl mx-auto text-white/80">
-              Enchanting tales to inspire dreams and spark imagination under the starry night sky
+            <div className="w-24 h-1 bg-[#005F6B] mx-auto mb-6"></div>
+            <p className="font-sans text-xl max-w-2xl mx-auto text-white/80">
+              Scientifically optimized soundscapes to enhance your environment and improve wellbeing
             </p>
           </motion.div>
           
@@ -136,12 +136,12 @@ export default function Stories() {
                     <h3 className="font-['Montserrat'] font-bold text-xl mb-2 text-white">{story.title}</h3>
                     <p className="text-white/70 mb-4 line-clamp-2">{story.excerpt}</p>
                     <div className="flex justify-between items-center">
-                      <span className="text-[#F6C026] text-sm flex items-center">
+                      <span className="text-[#C8D5B9] text-sm flex items-center">
                         <Calendar size={14} className="mr-1" />
                         {formatDistance(new Date(story.publishedAt), new Date(), { addSuffix: true })}
                       </span>
                       <Link href={`/stories/${story.id}`}>
-                        <a className="text-[#8A6FDF] hover:text-[#F6C026] transition-colors">Read More →</a>
+                        <a className="text-[#005F6B] hover:text-[#C8D5B9] transition-colors">Experience →</a>
                       </Link>
                     </div>
                   </div>
@@ -159,7 +159,7 @@ export default function Stories() {
               {selectedCategory && (
                 <button
                   onClick={() => setSelectedCategory(null)}
-                  className="mt-4 text-[#F6C026] hover:underline"
+                  className="mt-4 text-[#005F6B] hover:underline"
                 >
                   View all stories
                 </button>
