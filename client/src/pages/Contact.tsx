@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import StarryBackground from "@/components/ui/starry-background";
-import Navbar from "@/components/Navbar";
+
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Footer from "@/components/Footer";
 import { FOOTER_LINKS } from "@/lib/constants";
@@ -57,7 +57,7 @@ export default function Contact() {
       
       <header className="relative z-10">
         <AnnouncementBar />
-        <Navbar />
+        
       </header>
       
       <main className="relative z-10 py-16">

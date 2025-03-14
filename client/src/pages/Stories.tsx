@@ -7,7 +7,7 @@ import { Link } from "wouter";
 import { Calendar, Filter } from "lucide-react";
 import { formatDistance } from "date-fns";
 import StarryBackground from "@/components/ui/starry-background";
-import Navbar from "@/components/Navbar";
+
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Footer from "@/components/Footer";
 import { STORY_CATEGORIES } from "@/lib/constants";
@@ -40,7 +40,7 @@ export default function Stories() {
       
       <header className="relative z-10">
         <AnnouncementBar />
-        <Navbar />
+        
       </header>
       
       <main className="relative z-10 py-16">

@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
 import StarryBackground from "@/components/ui/starry-background";
-import Navbar from "@/components/Navbar";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Footer from "@/components/Footer";
 import NewsletterSection from "@/components/NewsletterSection";
@@ -13,7 +12,6 @@ export default function About() {
       
       <header className="relative z-10">
         <AnnouncementBar />
-        <Navbar />
       </header>
       
       <main className="relative z-10">

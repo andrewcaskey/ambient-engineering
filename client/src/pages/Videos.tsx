@@ -4,7 +4,6 @@ import { fadeIn, staggerContainer } from "@/lib/animations";
 import { Video } from "@shared/schema";
 import { Play, Clock } from "lucide-react";
 import StarryBackground from "@/components/ui/starry-background";
-import Navbar from "@/components/Navbar";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Footer from "@/components/Footer";
 
@@ -22,7 +21,6 @@ export default function Videos() {
       
       <header className="relative z-10">
         <AnnouncementBar />
-        <Navbar />
       </header>
       
       <main className="relative z-10 py-16">

@@ -5,7 +5,7 @@ import { fadeIn, staggerContainer } from "@/lib/animations";
 import { GalleryItem } from "@shared/schema";
 import { X } from "lucide-react";
 import StarryBackground from "@/components/ui/starry-background";
-import Navbar from "@/components/Navbar";
+
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Footer from "@/components/Footer";
 
@@ -32,7 +32,7 @@ export default function Gallery() {
       
       <header className="relative z-10">
         <AnnouncementBar />
-        <Navbar />
+        
       </header>
       
       <main className="relative z-10 py-16">
