@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import Stories from "@/pages/Stories";
-import Videos from "@/pages/Videos";
+import Podcast from "@/pages/Podcast";
 import Gallery from "@/pages/Gallery";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
@@ -16,7 +16,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/stories" component={Stories} />
-      <Route path="/videos" component={Videos} />
+      <Route path="/podcast" component={Podcast} />
       <Route path="/gallery" component={Gallery} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
