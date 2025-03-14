@@ -55,10 +55,13 @@ export const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="relative p-3 bg-[#0F1729] rounded-full"
+              className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-10 w-10 rounded-full flex items-center justify-center transition-all duration-300"
             >
-              <div className="absolute inset-0 bg-[#FF4785] opacity-20 rounded-full"></div>
-              <Instagram size={26} className="text-[#FF4785]" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" x2="17.5" y1="6.5" y2="6.5"></line>
+              </svg>
             </a>
             
             <a 
@@ -66,10 +69,11 @@ export const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter"
-              className="relative p-3 bg-[#0F1729] rounded-full"
+              className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-10 w-10 rounded-full flex items-center justify-center transition-all duration-300"
             >
-              <div className="absolute inset-0 bg-[#1DA1F2] opacity-20 rounded-full"></div>
-              <Twitter size={26} className="text-[#1DA1F2]" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+              </svg>
             </a>
             
             <a 
@@ -77,10 +81,12 @@ export const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
-              className="relative p-3 bg-[#0F1729] rounded-full"
+              className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-10 w-10 rounded-full flex items-center justify-center transition-all duration-300"
             >
-              <div className="absolute inset-0 bg-[#FF0000] opacity-20 rounded-full"></div>
-              <Youtube size={26} className="text-[#FF0000]" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
+                <path d="m10 15 5-3-5-3z"></path>
+              </svg>
             </a>
             
             <a 
@@ -88,10 +94,14 @@ export const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Spotify"
-              className="relative p-3 bg-[#0F1729] rounded-full"
+              className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-10 w-10 rounded-full flex items-center justify-center transition-all duration-300"
             >
-              <div className="absolute inset-0 bg-[#1ED760] opacity-20 rounded-full"></div>
-              <Headphones size={26} className="text-[#1ED760]" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 14.5a6.5 6.5 0 0 1 8 0"></path>
+                <path d="M8 10.5a9.5 9.5 0 0 1 8 0"></path>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
             </a>
           </div>
           
@@ -155,10 +165,13 @@ export const Navbar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="relative p-4 bg-[#0F1729] rounded-full"
+                  className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-12 w-12 rounded-full flex items-center justify-center transition-all duration-300"
                 >
-                  <div className="absolute inset-0 bg-[#FF4785] opacity-20 rounded-full"></div>
-                  <Instagram size={28} className="text-[#FF4785]" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" x2="17.5" y1="6.5" y2="6.5"></line>
+                  </svg>
                 </a>
                 
                 <a 
@@ -166,10 +179,11 @@ export const Navbar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Twitter"
-                  className="relative p-4 bg-[#0F1729] rounded-full"
+                  className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-12 w-12 rounded-full flex items-center justify-center transition-all duration-300"
                 >
-                  <div className="absolute inset-0 bg-[#1DA1F2] opacity-20 rounded-full"></div>
-                  <Twitter size={28} className="text-[#1DA1F2]" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                  </svg>
                 </a>
                 
                 <a 
@@ -177,10 +191,12 @@ export const Navbar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="YouTube"
-                  className="relative p-4 bg-[#0F1729] rounded-full"
+                  className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-12 w-12 rounded-full flex items-center justify-center transition-all duration-300"
                 >
-                  <div className="absolute inset-0 bg-[#FF0000] opacity-20 rounded-full"></div>
-                  <Youtube size={28} className="text-[#FF0000]" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                    <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
+                    <path d="m10 15 5-3-5-3z"></path>
+                  </svg>
                 </a>
                 
                 <a 
@@ -188,10 +204,14 @@ export const Navbar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Spotify"
-                  className="relative p-4 bg-[#0F1729] rounded-full"
+                  className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-12 w-12 rounded-full flex items-center justify-center transition-all duration-300"
                 >
-                  <div className="absolute inset-0 bg-[#1ED760] opacity-20 rounded-full"></div>
-                  <Headphones size={28} className="text-[#1ED760]" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M8 14.5a6.5 6.5 0 0 1 8 0"></path>
+                    <path d="M8 10.5a9.5 9.5 0 0 1 8 0"></path>
+                    <circle cx="12" cy="12" r="2"></circle>
+                  </svg>
                 </a>
               </div>
               
