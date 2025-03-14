@@ -4,7 +4,6 @@ import { fadeIn, staggerContainer } from "@/lib/animations";
 import { Video } from "@shared/schema";
 import { Play, Clock } from "lucide-react";
 import StarryBackground from "@/components/ui/starry-background";
-import AnnouncementBar from "@/components/AnnouncementBar";
 import Footer from "@/components/Footer";
 
 export default function Videos() {
@@ -16,12 +15,8 @@ export default function Videos() {
   const regularVideos = videos?.filter(video => !video.featured);
 
   return (
-    <div className="font-['Roboto'] text-white bg-[#0F1729] min-h-screen">
+    <div className="font-sans text-white bg-[#0F1729] min-h-screen">
       <StarryBackground />
-      
-      <header className="relative z-10">
-        <AnnouncementBar />
-      </header>
       
       <main className="relative z-10 py-16">
         <div className="container mx-auto px-4">

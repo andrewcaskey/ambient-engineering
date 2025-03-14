@@ -1,18 +1,13 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
 import StarryBackground from "@/components/ui/starry-background";
-import AnnouncementBar from "@/components/AnnouncementBar";
 import Footer from "@/components/Footer";
 import NewsletterSection from "@/components/NewsletterSection";
 
 export default function About() {
   return (
-    <div className="font-['Roboto'] text-white bg-[#0F1729] min-h-screen">
+    <div className="font-sans text-white bg-[#0F1729] min-h-screen">
       <StarryBackground />
-      
-      <header className="relative z-10">
-        <AnnouncementBar />
-      </header>
       
       <main className="relative z-10">
         {/* Hero section */}
@@ -32,13 +27,13 @@ export default function About() {
               animate="show"
               className="text-center max-w-3xl mx-auto"
             >
-              <h1 className="text-5xl font-['Montserrat'] font-bold uppercase mb-6">
-                About <span className="text-[#F6C026]">Nocturnal Narratives</span>
+              <h1 className="text-5xl font-heading font-bold uppercase mb-6">
+                About <span className="text-[#005F6B]">AmbientLab</span>
               </h1>
-              <div className="w-24 h-1 bg-[#F6C026] mx-auto mb-8"></div>
-              <p className="font-['Playfair_Display'] text-xl text-white/90 leading-relaxed">
-                Creating enchanting nature-themed bedtime stories that inspire wonder 
-                and imagination under the starlit night sky.
+              <div className="w-24 h-1 bg-[#005F6B] mx-auto mb-8"></div>
+              <p className="font-sans text-xl text-white/90 leading-relaxed">
+                Empowering users to scientifically optimize their environments through 
+                innovative audio technology and research-backed solutions.
               </p>
             </motion.div>
           </div>
@@ -54,23 +49,25 @@ export default function About() {
                 whileInView="show"
                 viewport={{ once: true, amount: 0.25 }}
               >
-                <h2 className="text-3xl font-['Montserrat'] font-bold mb-6">Our Story</h2>
-                <div className="w-16 h-1 bg-[#F6C026] mb-6"></div>
+                <h2 className="text-3xl font-heading font-bold mb-6">Our Story</h2>
+                <div className="w-16 h-1 bg-[#005F6B] mb-6"></div>
                 <div className="prose prose-lg prose-invert">
                   <p>
-                    Nocturnal Narratives was born from a simple idea: to create a 
-                    digital sanctuary where the magic of bedtime stories meets the 
-                    wonder of the natural world under starry skies.
+                    AmbientLab was founded in 2022 by a team of audio engineers, 
+                    cognitive scientists, and wellness experts with a common goal: 
+                    to revolutionize how we experience and interact with our auditory 
+                    environments.
                   </p>
                   <p>
-                    Founded in 2023 by a collective of writers, illustrators, and 
-                    dreamers, we set out to craft immersive tales that transport 
-                    readers of all ages to enchanted forests, cosmic voyages, and 
-                    moonlit adventures.
+                    What began as a research project in acoustic engineering has evolved 
+                    into a pioneering company at the intersection of sound science and 
+                    human wellbeing. We've spent years studying how different sonic 
+                    environments affect productivity, stress levels, and overall health.
                   </p>
                   <p>
-                    Our mission is to inspire a deep connection with nature and the night 
-                    sky through storytelling that nurtures imagination and wonder.
+                    Our mission is to empower individuals and organizations to harness 
+                    the power of scientifically optimized sound for improved focus, 
+                    creativity, and wellness in any environment.
                   </p>
                 </div>
               </motion.div>
@@ -82,10 +79,10 @@ export default function About() {
                 viewport={{ once: true, amount: 0.25 }}
                 className="relative h-80 md:h-auto"
               >
-                <div className="absolute inset-4 border-2 border-[#F6C026] rounded-lg"></div>
+                <div className="absolute inset-4 border-2 border-[#005F6B] rounded-lg"></div>
                 <img 
-                  src="https://images.unsplash.com/photo-1513010072333-792fcc02ee7d?auto=format&fit=crop&w=800&q=80" 
-                  alt="Starry night with fireflies" 
+                  src="https://images.unsplash.com/photo-1478147427282-58a87a120781?auto=format&fit=crop&w=800&q=80" 
+                  alt="Modern audio engineering workspace" 
                   className="relative z-10 rounded-lg shadow-xl object-cover w-full h-80 md:h-96"
                 />
               </motion.div>
@@ -103,10 +100,10 @@ export default function About() {
               viewport={{ once: true, amount: 0.25 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-['Montserrat'] font-bold uppercase mb-4">
-                Our <span className="text-[#F6C026]">Values</span>
+              <h2 className="text-3xl font-heading font-bold uppercase mb-4">
+                Our <span className="text-[#005F6B]">Values</span>
               </h2>
-              <div className="w-24 h-1 bg-[#F6C026] mx-auto"></div>
+              <div className="w-24 h-1 bg-[#005F6B] mx-auto"></div>
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -117,13 +114,13 @@ export default function About() {
                 viewport={{ once: true, amount: 0.25 }}
                 className="bg-white/5 backdrop-blur-sm rounded-lg p-6 text-center"
               >
-                <div className="w-16 h-16 bg-[#F6C026]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-[#F6C026] text-2xl">🌱</span>
+                <div className="w-16 h-16 bg-[#005F6B]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#C8D5B9] text-2xl">🔬</span>
                 </div>
-                <h3 className="text-xl font-['Montserrat'] font-bold mb-4">Nature Connection</h3>
+                <h3 className="text-xl font-heading font-bold mb-4">Scientific Excellence</h3>
                 <p className="text-white/70">
-                  We believe in fostering a deep appreciation for the natural world
-                  through stories that highlight its beauty and wonder.
+                  We're committed to rigorous research and evidence-based solutions
+                  that deliver measurable results for our users.
                 </p>
               </motion.div>
               
@@ -134,13 +131,13 @@ export default function About() {
                 viewport={{ once: true, amount: 0.25 }}
                 className="bg-white/5 backdrop-blur-sm rounded-lg p-6 text-center"
               >
-                <div className="w-16 h-16 bg-[#8A6FDF]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-[#8A6FDF] text-2xl">✨</span>
+                <div className="w-16 h-16 bg-[#C8D5B9]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#C8D5B9] text-2xl">🎧</span>
                 </div>
-                <h3 className="text-xl font-['Montserrat'] font-bold mb-4">Imagination</h3>
+                <h3 className="text-xl font-heading font-bold mb-4">Sonic Innovation</h3>
                 <p className="text-white/70">
-                  We champion creativity and the power of imagination to transport
-                  us to magical worlds and expand our horizons.
+                  We push the boundaries of audio technology to create immersive
+                  environments that enhance human experience and potential.
                 </p>
               </motion.div>
               
@@ -151,13 +148,13 @@ export default function About() {
                 viewport={{ once: true, amount: 0.25 }}
                 className="bg-white/5 backdrop-blur-sm rounded-lg p-6 text-center"
               >
-                <div className="w-16 h-16 bg-[#4ECDC4]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-[#4ECDC4] text-2xl">🌙</span>
+                <div className="w-16 h-16 bg-[#005F6B]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#C8D5B9] text-2xl">🌿</span>
                 </div>
-                <h3 className="text-xl font-['Montserrat'] font-bold mb-4">Tranquility</h3>
+                <h3 className="text-xl font-heading font-bold mb-4">Wellness Focus</h3>
                 <p className="text-white/70">
-                  We create peaceful narratives that calm the mind and prepare it
-                  for restful sleep under the watchful stars.
+                  We believe in the profound impact of optimized environments on human
+                  wellbeing, productivity, and cognitive performance.
                 </p>
               </motion.div>
             </div>
@@ -174,35 +171,35 @@ export default function About() {
               viewport={{ once: true, amount: 0.25 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-['Montserrat'] font-bold uppercase mb-4">
-                Our <span className="text-[#F6C026]">Team</span>
+              <h2 className="text-3xl font-heading font-bold uppercase mb-4">
+                Our <span className="text-[#005F6B]">Team</span>
               </h2>
-              <div className="w-24 h-1 bg-[#F6C026] mx-auto mb-6"></div>
-              <p className="font-['Playfair_Display'] text-lg max-w-2xl mx-auto text-white/80">
-                Meet the dreamers and storytellers behind Nocturnal Narratives
+              <div className="w-24 h-1 bg-[#005F6B] mx-auto mb-6"></div>
+              <p className="font-sans text-lg max-w-2xl mx-auto text-white/80">
+                Meet the innovative minds behind AmbientLab's technology and vision
               </p>
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
-                  name: "Luna Starling",
-                  role: "Founder & Head Writer",
+                  name: "Dr. Maya Chen",
+                  role: "Founder & Chief Scientist",
                   image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=500&h=500&q=80"
                 },
                 {
-                  name: "Orion Woods",
-                  role: "Lead Illustrator",
+                  name: "Alex Rivera",
+                  role: "Lead Audio Engineer",
                   image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&h=500&q=80"
                 },
                 {
-                  name: "Aurora Night",
-                  role: "Narrative Designer",
+                  name: "Dr. Sophia Kim",
+                  role: "Cognitive Research Director",
                   image: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?auto=format&fit=crop&w=500&h=500&q=80"
                 },
                 {
-                  name: "Sirius Moonbeam",
-                  role: "Audio Producer",
+                  name: "Marcus Johnson",
+                  role: "Head of Product Development",
                   image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&h=500&q=80"
                 }
               ].map((member, index) => (
@@ -222,8 +219,8 @@ export default function About() {
                     />
                   </div>
                   <div className="p-4">
-                    <h3 className="text-xl font-['Montserrat'] font-bold">{member.name}</h3>
-                    <p className="text-[#F6C026]">{member.role}</p>
+                    <h3 className="text-xl font-heading font-bold">{member.name}</h3>
+                    <p className="text-[#C8D5B9]">{member.role}</p>
                   </div>
                 </motion.div>
               ))}

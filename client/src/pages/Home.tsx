@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import AnnouncementBar from "@/components/AnnouncementBar";
 import HeroSection from "@/components/HeroSection";
 import FeaturedEnvironmentsSection from "@/components/FeaturedEnvironmentsSection";
 import PodcastSection from "@/components/PodcastSection";
@@ -11,11 +10,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="font-['Montserrat'] text-white bg-[#0F1729] min-h-screen">
-      <header className="relative z-10">
-        <AnnouncementBar />
-      </header>
-      
+    <div className="font-sans text-white bg-[#0F1729] min-h-screen">      
       <main className="relative z-10">
         <HeroSection />
         <FeaturedEnvironmentsSection />
