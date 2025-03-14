@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Navbar from "@/components/Navbar";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import HeroSection from "@/components/HeroSection";
 import FeaturedEnvironmentsSection from "@/components/FeaturedEnvironmentsSection";
@@ -15,7 +14,6 @@ export default function Home() {
     <div className="font-['Montserrat'] text-white bg-[#0F1729] min-h-screen">
       <header className="relative z-10">
         <AnnouncementBar />
-        <Navbar />
       </header>
       
       <main className="relative z-10">

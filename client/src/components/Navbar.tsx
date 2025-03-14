@@ -17,7 +17,7 @@ export const Navbar = () => {
         {/* Desktop layout */}
         <div className="hidden md:flex justify-between items-center">
           {/* Logo - Left */}
-          <div className="flex-1 flex justify-start">
+          <div className="flex-1 flex justify-start items-center">
             <a href="/" className="text-2xl font-['Montserrat'] font-bold tracking-wider flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-[#C8D5B9]">
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
@@ -26,65 +26,8 @@ export const Navbar = () => {
             </a>
           </div>
           
-          {/* Social icons - Center */}
-          <div className="flex-1 flex justify-center items-center space-x-8">
-            <a 
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-10 w-10 rounded-full flex items-center justify-center transition-all duration-300"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" x2="17.5" y1="6.5" y2="6.5"></line>
-              </svg>
-            </a>
-            
-            <a 
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-              className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-10 w-10 rounded-full flex items-center justify-center transition-all duration-300"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
-              </svg>
-            </a>
-            
-            <a 
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-              className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-10 w-10 rounded-full flex items-center justify-center transition-all duration-300"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
-                <path d="m10 15 5-3-5-3z"></path>
-              </svg>
-            </a>
-            
-            <a 
-              href="https://spotify.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Spotify"
-              className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-10 w-10 rounded-full flex items-center justify-center transition-all duration-300"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M8 14.5a6.5 6.5 0 0 1 8 0"></path>
-                <path d="M8 10.5a9.5 9.5 0 0 1 8 0"></path>
-                <circle cx="12" cy="12" r="2"></circle>
-              </svg>
-            </a>
-          </div>
-          
-          {/* Navigation links - Right */}
-          <div className="flex-1 flex justify-end items-center space-x-6">
+          {/* Navigation links - Center */}
+          <div className="flex-1 flex justify-center items-center space-x-6">
             {NAVIGATION_LINKS.map((link) => (
               <a 
                 key={link.path} 
@@ -98,6 +41,64 @@ export const Navbar = () => {
                 {link.name}
               </a>
             ))}
+          </div>
+          
+          {/* Social icons - Right */}
+          <div className="flex-1 flex justify-end items-center space-x-4">
+            <a 
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-9 w-9 rounded-full flex items-center justify-center transition-all duration-300"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" x2="17.5" y1="6.5" y2="6.5"></line>
+              </svg>
+            </a>
+            
+            <a 
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+              className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-9 w-9 rounded-full flex items-center justify-center transition-all duration-300"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+              </svg>
+            </a>
+            
+            <a 
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+              className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-9 w-9 rounded-full flex items-center justify-center transition-all duration-300"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10a2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
+                <path d="m10 15 5-3-5-3z"></path>
+              </svg>
+            </a>
+            
+            <a 
+              href="https://spotify.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Spotify"
+              className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-9 w-9 rounded-full flex items-center justify-center transition-all duration-300"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 14.5a6.5 6.5 0 0 1 8 0"></path>
+                <path d="M8 10.5a9.5 9.5 0 0 1 8 0"></path>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+            </a>
+            
             <button aria-label="Search" className="text-white hover:text-[#C8D5B9] transition-colors ml-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="11" cy="11" r="8"></circle>
@@ -188,7 +189,7 @@ export const Navbar = () => {
                   className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-12 w-12 rounded-full flex items-center justify-center transition-all duration-300"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                    <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
+                    <path d="M2.5 17a24.12 24.12 0 0 1 0-10a2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10a2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
                     <path d="m10 15 5-3-5-3z"></path>
                   </svg>
                 </a>
