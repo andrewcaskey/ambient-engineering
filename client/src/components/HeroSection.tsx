@@ -4,8 +4,6 @@ import { fadeIn, floatAnimation, twinkleAnimation } from "@/lib/animations";
 import { StarryBackground } from "@/components/ui/starry-background";
 import { useEffect, useState, useMemo, useCallback } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { SOCIAL_LINKS } from "@/lib/constants";
-import { Headphones, Instagram, Twitter, Youtube } from "lucide-react";
 
 export const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -98,25 +96,6 @@ export const HeroSection = () => {
   return (
     <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#0F172940] to-[#0F1729] z-10"></div>
-      
-      {/* Social media links at the top */}
-      <div className="absolute top-4 right-4 md:top-8 md:right-8 z-30 flex space-x-4">
-        {SOCIAL_LINKS.map((social) => (
-          <a 
-            key={social.name}
-            href={social.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={social.name}
-            className="text-white hover:text-[#C8D5B9] transition-all duration-300 hover:scale-110 transform"
-          >
-            {social.icon === "Instagram" && <Instagram className="h-5 w-5 md:h-6 md:w-6" />}
-            {social.icon === "Twitter" && <Twitter className="h-5 w-5 md:h-6 md:w-6" />}
-            {social.icon === "Youtube" && <Youtube className="h-5 w-5 md:h-6 md:w-6" />}
-            {social.icon === "Music" && <Headphones className="h-5 w-5 md:h-6 md:w-6" />}
-          </a>
-        ))}
-      </div>
       
       {/* Interactive ambient background */}
       <div className="absolute inset-0 z-0">
