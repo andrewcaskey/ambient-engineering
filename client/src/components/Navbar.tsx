@@ -18,11 +18,13 @@ export const Navbar = () => {
         <div className="hidden md:flex justify-between items-center">
           {/* Logo - Left */}
           <div className="flex-1 flex justify-start items-center">
-            <a href="/" className="text-2xl font-['Poppins'] font-medium tracking-wider flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-[#C8D5B9]">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-              </svg>
-              <span>ambient <span className="text-[#C8D5B9]">lab</span></span>
+            <a href="/" className="text-2xl font-['Poppins'] font-semibold tracking-wider flex items-center">
+              <div className="w-9 h-9 mr-2.5 rounded-lg bg-gradient-to-br from-[#005F6B] to-[#009FB7] flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <span className="font-medium">ambient<span className="font-semibold text-[#009FB7]">lab</span></span>
             </a>
           </div>
           
@@ -33,8 +35,8 @@ export const Navbar = () => {
                 key={link.path} 
                 href={link.path}
                 className={`relative lowercase font-['Inter'] font-bold text-sm transition-colors ${
-                  location === link.path ? "text-[#C8D5B9]" : "text-white hover:text-[#C8D5B9]"
-                } after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-[#C8D5B9] after:bottom-[-2px] after:left-0 after:transition-all ${
+                  location === link.path ? "text-[#009FB7]" : "text-white hover:text-[#009FB7]"
+                } after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-[#009FB7] after:bottom-[-2px] after:left-0 after:transition-all ${
                   location === link.path ? "after:w-full" : "hover:after:w-full"
                 }`}
               >
@@ -50,7 +52,7 @@ export const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-9 w-9 rounded-full flex items-center justify-center transition-all duration-300"
+              className="bg-[#005F6B] hover:bg-[#009FB7] p-2 h-9 w-9 rounded-full flex items-center justify-center transition-all duration-300"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
@@ -99,7 +101,7 @@ export const Navbar = () => {
               </svg>
             </a>
             
-            <button aria-label="Search" className="text-white hover:text-[#C8D5B9] transition-colors ml-2">
+            <button aria-label="Search" className="text-white hover:text-[#009FB7] transition-colors ml-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="11" cy="11" r="8"></circle>
                 <path d="m21 21-4.3-4.3"></path>
@@ -112,11 +114,13 @@ export const Navbar = () => {
         <div className="flex md:hidden justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="text-xl font-['Poppins'] font-medium tracking-wider flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-[#C8D5B9]">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-              </svg>
-              <span>ambient <span className="text-[#C8D5B9]">lab</span></span>
+            <a href="/" className="text-xl font-['Poppins'] font-semibold tracking-wider flex items-center">
+              <div className="w-8 h-8 mr-2 rounded-lg bg-gradient-to-br from-[#005F6B] to-[#009FB7] flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <span className="font-medium">ambient<span className="font-semibold text-[#009FB7]">lab</span></span>
             </a>
           </div>
           
@@ -216,7 +220,7 @@ export const Navbar = () => {
                   key={link.path} 
                   href={link.path}
                   className={`text-xl lowercase font-['Inter'] font-bold ${
-                    location === link.path ? "text-[#C8D5B9]" : "text-white"
+                    location === link.path ? "text-[#009FB7]" : "text-white"
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -226,7 +230,7 @@ export const Navbar = () => {
               
               {/* Search button in mobile menu */}
               <div className="mt-6 pt-6 border-t border-white/10 w-full flex justify-center">
-                <button aria-label="Search" className="bg-[#005F6B]/40 hover:bg-[#005F6B] text-white p-3 rounded-full transition-colors duration-300">
+                <button aria-label="Search" className="bg-[#005F6B]/40 hover:bg-[#009FB7] text-white p-3 rounded-full transition-colors duration-300">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <circle cx="11" cy="11" r="8"></circle>
                     <path d="m21 21-4.3-4.3"></path>
