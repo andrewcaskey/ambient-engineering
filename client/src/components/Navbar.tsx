@@ -18,11 +18,11 @@ export const Navbar = () => {
         <div className="hidden md:flex justify-between items-center">
           {/* Logo - Left */}
           <div className="flex-1 flex justify-start items-center">
-            <a href="/" className="text-2xl font-['Montserrat'] font-bold tracking-wider flex items-center">
+            <a href="/" className="text-2xl font-['Poppins'] font-medium tracking-wider flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-[#C8D5B9]">
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
               </svg>
-              <span>AMBIENT <span className="text-[#C8D5B9]">ENGINEERING</span></span>
+              <span>ambient <span className="text-[#C8D5B9]">lab</span></span>
             </a>
           </div>
           
@@ -32,7 +32,7 @@ export const Navbar = () => {
               <a 
                 key={link.path} 
                 href={link.path}
-                className={`relative lowercase font-['Montserrat'] font-semibold text-sm transition-colors ${
+                className={`relative lowercase font-['Inter'] font-bold text-sm transition-colors ${
                   location === link.path ? "text-[#C8D5B9]" : "text-white hover:text-[#C8D5B9]"
                 } after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-[#C8D5B9] after:bottom-[-2px] after:left-0 after:transition-all ${
                   location === link.path ? "after:w-full" : "hover:after:w-full"
@@ -112,11 +112,11 @@ export const Navbar = () => {
         <div className="flex md:hidden justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="text-xl font-['Montserrat'] font-bold tracking-wider flex items-center">
+            <a href="/" className="text-xl font-['Poppins'] font-medium tracking-wider flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-[#C8D5B9]">
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
               </svg>
-              <span>AMBIENT <span className="text-[#C8D5B9]">ENGINEERING</span></span>
+              <span>ambient <span className="text-[#C8D5B9]">lab</span></span>
             </a>
           </div>
           
@@ -215,7 +215,7 @@ export const Navbar = () => {
                 <a 
                   key={link.path} 
                   href={link.path}
-                  className={`text-xl lowercase font-['Montserrat'] font-semibold ${
+                  className={`text-xl lowercase font-['Inter'] font-bold ${
                     location === link.path ? "text-[#C8D5B9]" : "text-white"
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
