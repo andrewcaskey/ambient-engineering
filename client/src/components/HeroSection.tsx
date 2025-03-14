@@ -171,7 +171,7 @@ export const HeroSection = () => {
             variants={fadeIn("up", 0.3)}
             initial="hidden"
             animate="show"
-            className="text-4xl sm:text-5xl md:text-7xl font-['Montserrat'] font-black mb-2 md:mb-4 tracking-wide text-white drop-shadow-lg"
+            className="text-4xl sm:text-5xl md:text-7xl font-heading font-black mb-2 md:mb-4 tracking-wide text-white drop-shadow-lg"
           >
             <span className="text-white">Ambient</span><span className="text-[#C8D5B9]">Lab</span>
           </motion.h1>
@@ -180,7 +180,7 @@ export const HeroSection = () => {
             variants={fadeIn("up", 0.4)}
             initial="hidden"
             animate="show"
-            className="font-['Montserrat'] text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto mb-2 text-white/90 px-4"
+            className="font-heading text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto mb-2 text-white/90 px-4"
           >
             Engineer Your Perfect Environment
           </motion.p>
@@ -198,7 +198,7 @@ export const HeroSection = () => {
             variants={fadeIn("up", 0.45)}
             initial="hidden"
             animate="show"
-            className="font-['Inter'] text-base sm:text-lg max-w-xl mx-auto mb-8 text-white/80 px-4"
+            className="font-sans text-base sm:text-lg max-w-xl mx-auto mb-8 text-white/80 px-4"
           >
             Transform any space into a precisely calibrated atmosphere that supports your specific mental and emotional needs
           </motion.p>
@@ -209,10 +209,10 @@ export const HeroSection = () => {
             animate="show"
             className="flex flex-col sm:flex-row justify-center gap-4"
           >
-            <a href="#newsletter" className="bg-[#005F6B] text-white px-6 sm:px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 text-sm sm:text-base text-center transform hover:scale-105 shadow-lg">
+            <a href="#newsletter" className="bg-[#005F6B] text-white px-6 sm:px-8 py-3 rounded-full font-heading font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 text-sm sm:text-base text-center transform hover:scale-105 shadow-lg">
               Join Waitlist
             </a>
-            <a href="#sound-packs" className="bg-transparent backdrop-blur-md border border-[#C8D5B9] text-[#C8D5B9] px-6 sm:px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 text-sm sm:text-base text-center transform hover:scale-105 shadow-lg">
+            <a href="#sound-packs" className="bg-transparent backdrop-blur-md border border-[#C8D5B9] text-[#C8D5B9] px-6 sm:px-8 py-3 rounded-full font-heading font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 text-sm sm:text-base text-center transform hover:scale-105 shadow-lg">
               Free Sound Packs
             </a>
           </motion.div>

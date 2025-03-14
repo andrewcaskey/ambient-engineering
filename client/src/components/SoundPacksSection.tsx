@@ -73,11 +73,11 @@ export const SoundPacksSection = () => {
           viewport={{ once: true, amount: 0.25 }}
           className="text-center mb-8 md:mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-['Montserrat'] font-bold uppercase mb-3 md:mb-4">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold uppercase mb-3 md:mb-4">
             Sound <span className="text-[#C8D5B9]">Packs</span>
           </h2>
           <div className="w-16 md:w-24 h-1 bg-[#005F6B] mx-auto mb-4 md:mb-6"></div>
-          <p className="font-['Montserrat'] text-base md:text-lg max-w-2xl mx-auto text-white/80 px-2">
+          <p className="font-sans text-base md:text-lg max-w-2xl mx-auto text-white/80 px-2">
             Engineered ambient soundscapes for every environment
           </p>
         </motion.div>
@@ -100,7 +100,7 @@ export const SoundPacksSection = () => {
                   <div className="bg-[#005F6B]/30 rounded-full p-2 md:p-3 mr-3 md:mr-4">
                     {pack.icon}
                   </div>
-                  <h3 className="font-['Montserrat'] font-bold text-lg md:text-xl text-white">{pack.title}</h3>
+                  <h3 className="font-heading font-bold text-lg md:text-xl text-white">{pack.title}</h3>
                 </div>
                 
                 <p className="text-white/70 text-sm md:text-base mb-3 md:mb-4">{pack.description}</p>
@@ -164,7 +164,7 @@ export const SoundPacksSection = () => {
           className="text-center mt-8 md:mt-12"
         >
           <button 
-            className="inline-block bg-[#005F6B] text-white px-6 md:px-8 py-2.5 md:py-3 text-sm md:text-base rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-colors duration-300"
+            className="inline-block bg-[#005F6B] text-white px-6 md:px-8 py-2.5 md:py-3 text-sm md:text-base rounded-full font-heading font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-colors duration-300"
           >
             Browse All Sound Packs
           </button>
