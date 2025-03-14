@@ -12,7 +12,8 @@ import {
   Instagram, 
   Twitter, 
   Youtube, 
-  Facebook 
+  Facebook,
+  Music
 } from "lucide-react";
 
 const getLucideIcon = (name: string) => {
@@ -22,7 +23,7 @@ const getLucideIcon = (name: string) => {
     case "Youtube": return <Youtube className="h-5 w-5 md:h-6 md:w-6" />;
     case "Music": return <Headphones className="h-5 w-5 md:h-6 md:w-6" />;
     case "Facebook": return <Facebook className="h-5 w-5 md:h-6 md:w-6" />;
-    default: return null;
+    default: return <Activity className="h-5 w-5 md:h-6 md:w-6" />;
   }
 };
 
@@ -49,18 +50,45 @@ export const Navbar = () => {
           
           {/* Social icons - Center */}
           <div className="flex-1 flex justify-center items-center space-x-6">
-            {SOCIAL_LINKS.map((social) => (
-              <a 
-                key={social.name}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.name}
-                className="flex items-center justify-center h-10 w-10 rounded-full bg-[#005F6B] text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 hover:scale-110 transform border border-white/20 hover:border-[#C8D5B9]"
-              >
-                {getLucideIcon(social.icon)}
-              </a>
-            ))}
+            <a 
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="flex items-center justify-center h-10 w-10 rounded-full bg-[#005F6B] text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 hover:scale-110 transform border border-white/20 hover:border-[#C8D5B9]"
+            >
+              <Instagram className="h-5 w-5 md:h-6 md:w-6" />
+            </a>
+            
+            <a 
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+              className="flex items-center justify-center h-10 w-10 rounded-full bg-[#005F6B] text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 hover:scale-110 transform border border-white/20 hover:border-[#C8D5B9]"
+            >
+              <Twitter className="h-5 w-5 md:h-6 md:w-6" />
+            </a>
+            
+            <a 
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+              className="flex items-center justify-center h-10 w-10 rounded-full bg-[#005F6B] text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 hover:scale-110 transform border border-white/20 hover:border-[#C8D5B9]"
+            >
+              <Youtube className="h-5 w-5 md:h-6 md:w-6" />
+            </a>
+            
+            <a 
+              href="https://spotify.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Spotify"
+              className="flex items-center justify-center h-10 w-10 rounded-full bg-[#005F6B] text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 hover:scale-110 transform border border-white/20 hover:border-[#C8D5B9]"
+            >
+              <Headphones className="h-5 w-5 md:h-6 md:w-6" />
+            </a>
           </div>
           
           {/* Navigation links - Right */}
@@ -118,18 +146,45 @@ export const Navbar = () => {
             <div className="flex flex-col items-center pt-10 space-y-6">
               {/* Social icons in mobile menu */}
               <div className="flex justify-center space-x-6 mb-8 py-5 w-full border-y border-white/10">
-                {SOCIAL_LINKS.map((social) => (
-                  <a 
-                    key={social.name}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={social.name}
-                    className="flex items-center justify-center h-12 w-12 rounded-full bg-[#005F6B] text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 hover:scale-110 transform border border-white/20 hover:border-[#C8D5B9]"
-                  >
-                    {getLucideIcon(social.icon)}
-                  </a>
-                ))}
+                <a 
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="flex items-center justify-center h-12 w-12 rounded-full bg-[#005F6B] text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 hover:scale-110 transform border border-white/20 hover:border-[#C8D5B9]"
+                >
+                  <Instagram className="h-6 w-6" />
+                </a>
+                
+                <a 
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Twitter"
+                  className="flex items-center justify-center h-12 w-12 rounded-full bg-[#005F6B] text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 hover:scale-110 transform border border-white/20 hover:border-[#C8D5B9]"
+                >
+                  <Twitter className="h-6 w-6" />
+                </a>
+                
+                <a 
+                  href="https://youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                  className="flex items-center justify-center h-12 w-12 rounded-full bg-[#005F6B] text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 hover:scale-110 transform border border-white/20 hover:border-[#C8D5B9]"
+                >
+                  <Youtube className="h-6 w-6" />
+                </a>
+                
+                <a 
+                  href="https://spotify.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Spotify"
+                  className="flex items-center justify-center h-12 w-12 rounded-full bg-[#005F6B] text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 hover:scale-110 transform border border-white/20 hover:border-[#C8D5B9]"
+                >
+                  <Headphones className="h-6 w-6" />
+                </a>
               </div>
               
               {/* Navigation links in mobile menu */}
