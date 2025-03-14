@@ -2,30 +2,6 @@ import { useState } from "react";
 import { useLocation } from "wouter";
 import { motion } from "framer-motion";
 import { NAVIGATION_LINKS, APP_NAME, SOCIAL_LINKS } from "@/lib/constants";
-import { 
-  Menu, 
-  Search, 
-  X, 
-  Headphones, 
-  Download, 
-  Activity,
-  Instagram, 
-  Twitter, 
-  Youtube, 
-  Facebook,
-  Music
-} from "lucide-react";
-
-const getLucideIcon = (name: string) => {
-  switch (name) {
-    case "Instagram": return <Instagram className="h-5 w-5 md:h-6 md:w-6" />;
-    case "Twitter": return <Twitter className="h-5 w-5 md:h-6 md:w-6" />;
-    case "Youtube": return <Youtube className="h-5 w-5 md:h-6 md:w-6" />;
-    case "Music": return <Headphones className="h-5 w-5 md:h-6 md:w-6" />;
-    case "Facebook": return <Facebook className="h-5 w-5 md:h-6 md:w-6" />;
-    default: return <Activity className="h-5 w-5 md:h-6 md:w-6" />;
-  }
-};
 
 export const Navbar = () => {
   const [location] = useLocation();
@@ -43,7 +19,9 @@ export const Navbar = () => {
           {/* Logo - Left */}
           <div className="flex-1 flex justify-start">
             <a href="/" className="text-2xl font-['Montserrat'] font-bold tracking-wider flex items-center">
-              <Activity className="mr-2 text-[#C8D5B9]" size={28} />
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-[#C8D5B9]">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
               <span>AMBIENT <span className="text-[#C8D5B9]">ENGINEERING</span></span>
             </a>
           </div>
@@ -121,7 +99,10 @@ export const Navbar = () => {
               </a>
             ))}
             <button aria-label="Search" className="text-white hover:text-[#C8D5B9] transition-colors ml-2">
-              <Search size={20} />
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </svg>
             </button>
           </div>
         </div>
@@ -131,7 +112,9 @@ export const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <a href="/" className="text-xl font-['Montserrat'] font-bold tracking-wider flex items-center">
-              <Activity className="mr-2 text-[#C8D5B9]" size={24} />
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-[#C8D5B9]">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
               <span>AMBIENT <span className="text-[#C8D5B9]">ENGINEERING</span></span>
             </a>
           </div>
@@ -143,7 +126,18 @@ export const Navbar = () => {
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               className="text-white p-2"
             >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {mobileMenuOpen ? (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M18 6 6 18"></path>
+                  <path d="m6 6 12 12"></path>
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="4" x2="20" y1="12" y2="12"></line>
+                  <line x1="4" x2="20" y1="6" y2="6"></line>
+                  <line x1="4" x2="20" y1="18" y2="18"></line>
+                </svg>
+              )}
             </button>
           </div>
         </div>
@@ -232,7 +226,10 @@ export const Navbar = () => {
               {/* Search button in mobile menu */}
               <div className="mt-6 pt-6 border-t border-white/10 w-full flex justify-center">
                 <button aria-label="Search" className="bg-[#005F6B]/40 hover:bg-[#005F6B] text-white p-3 rounded-full transition-colors duration-300">
-                  <Search size={20} />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
+                  </svg>
                 </button>
               </div>
             </div>
