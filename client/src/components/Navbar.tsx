@@ -49,15 +49,16 @@ export const Navbar = () => {
           </div>
           
           {/* Social icons - Center */}
-          <div className="flex-1 flex justify-center items-center space-x-6">
+          <div className="flex-1 flex justify-center items-center space-x-8">
             <a 
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="flex items-center justify-center h-10 w-10 rounded-full bg-[#005F6B] text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 hover:scale-110 transform border border-white/20 hover:border-[#C8D5B9]"
+              className="relative p-3 bg-[#0F1729] rounded-full"
             >
-              <Instagram className="h-5 w-5 md:h-6 md:w-6" />
+              <div className="absolute inset-0 bg-[#FF4785] opacity-20 rounded-full"></div>
+              <Instagram size={26} className="text-[#FF4785]" />
             </a>
             
             <a 
@@ -65,9 +66,10 @@ export const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter"
-              className="flex items-center justify-center h-10 w-10 rounded-full bg-[#005F6B] text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 hover:scale-110 transform border border-white/20 hover:border-[#C8D5B9]"
+              className="relative p-3 bg-[#0F1729] rounded-full"
             >
-              <Twitter className="h-5 w-5 md:h-6 md:w-6" />
+              <div className="absolute inset-0 bg-[#1DA1F2] opacity-20 rounded-full"></div>
+              <Twitter size={26} className="text-[#1DA1F2]" />
             </a>
             
             <a 
@@ -75,9 +77,10 @@ export const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
-              className="flex items-center justify-center h-10 w-10 rounded-full bg-[#005F6B] text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 hover:scale-110 transform border border-white/20 hover:border-[#C8D5B9]"
+              className="relative p-3 bg-[#0F1729] rounded-full"
             >
-              <Youtube className="h-5 w-5 md:h-6 md:w-6" />
+              <div className="absolute inset-0 bg-[#FF0000] opacity-20 rounded-full"></div>
+              <Youtube size={26} className="text-[#FF0000]" />
             </a>
             
             <a 
@@ -85,9 +88,10 @@ export const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Spotify"
-              className="flex items-center justify-center h-10 w-10 rounded-full bg-[#005F6B] text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 hover:scale-110 transform border border-white/20 hover:border-[#C8D5B9]"
+              className="relative p-3 bg-[#0F1729] rounded-full"
             >
-              <Headphones className="h-5 w-5 md:h-6 md:w-6" />
+              <div className="absolute inset-0 bg-[#1ED760] opacity-20 rounded-full"></div>
+              <Headphones size={26} className="text-[#1ED760]" />
             </a>
           </div>
           
@@ -145,15 +149,16 @@ export const Navbar = () => {
           >
             <div className="flex flex-col items-center pt-10 space-y-6">
               {/* Social icons in mobile menu */}
-              <div className="flex justify-center space-x-6 mb-8 py-5 w-full border-y border-white/10">
+              <div className="flex justify-center space-x-8 mb-8 py-5 w-full border-y border-white/10">
                 <a 
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="flex items-center justify-center h-12 w-12 rounded-full bg-[#005F6B] text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 hover:scale-110 transform border border-white/20 hover:border-[#C8D5B9]"
+                  className="relative p-4 bg-[#0F1729] rounded-full"
                 >
-                  <Instagram className="h-6 w-6" />
+                  <div className="absolute inset-0 bg-[#FF4785] opacity-20 rounded-full"></div>
+                  <Instagram size={28} className="text-[#FF4785]" />
                 </a>
                 
                 <a 
@@ -161,9 +166,10 @@ export const Navbar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Twitter"
-                  className="flex items-center justify-center h-12 w-12 rounded-full bg-[#005F6B] text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 hover:scale-110 transform border border-white/20 hover:border-[#C8D5B9]"
+                  className="relative p-4 bg-[#0F1729] rounded-full"
                 >
-                  <Twitter className="h-6 w-6" />
+                  <div className="absolute inset-0 bg-[#1DA1F2] opacity-20 rounded-full"></div>
+                  <Twitter size={28} className="text-[#1DA1F2]" />
                 </a>
                 
                 <a 
@@ -171,9 +177,10 @@ export const Navbar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="YouTube"
-                  className="flex items-center justify-center h-12 w-12 rounded-full bg-[#005F6B] text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 hover:scale-110 transform border border-white/20 hover:border-[#C8D5B9]"
+                  className="relative p-4 bg-[#0F1729] rounded-full"
                 >
-                  <Youtube className="h-6 w-6" />
+                  <div className="absolute inset-0 bg-[#FF0000] opacity-20 rounded-full"></div>
+                  <Youtube size={28} className="text-[#FF0000]" />
                 </a>
                 
                 <a 
@@ -181,9 +188,10 @@ export const Navbar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Spotify"
-                  className="flex items-center justify-center h-12 w-12 rounded-full bg-[#005F6B] text-white hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 hover:scale-110 transform border border-white/20 hover:border-[#C8D5B9]"
+                  className="relative p-4 bg-[#0F1729] rounded-full"
                 >
-                  <Headphones className="h-6 w-6" />
+                  <div className="absolute inset-0 bg-[#1ED760] opacity-20 rounded-full"></div>
+                  <Headphones size={28} className="text-[#1ED760]" />
                 </a>
               </div>
               
