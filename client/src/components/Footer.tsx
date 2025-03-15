@@ -36,8 +36,8 @@ export const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12">
           {/* Company info */}
           <div>
-            <h3 className="text-2xl font-['Montserrat'] font-bold mb-4">
-              <span className="text-white">Ambient</span><span className="text-[#C8D5B9]">Lab</span>
+            <h3 className="text-2xl font-bold mb-4">
+              <span className="text-white">Ambient</span><span className="text-[#009FB7]">Lab</span>
             </h3>
             <p className="text-white/70 mb-6">
               {COMPANY_INFO.description}
@@ -64,7 +64,7 @@ export const Footer = () => {
             <ul className="space-y-2">
               {FOOTER_LINKS.quickLinks.map((link) => (
                 <li key={link.path}>
-                  <Link href={link.path} className="text-white/70 hover:text-[#C8D5B9] transition-colors">
+                  <Link href={link.path} className="text-white/70 hover:text-[#009FB7] transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -78,7 +78,7 @@ export const Footer = () => {
             <ul className="space-y-2">
               {FOOTER_LINKS.categories.map((category) => (
                 <li key={category.path}>
-                  <Link href={category.path} className="text-white/70 hover:text-[#C8D5B9] transition-colors">
+                  <Link href={category.path} className="text-white/70 hover:text-[#009FB7] transition-colors">
                     {category.name}
                   </Link>
                 </li>
@@ -98,7 +98,7 @@ export const Footer = () => {
                   {contactItem.type === "email" ? (
                     <a 
                       href={`mailto:${contactItem.value}`} 
-                      className="text-white/70 hover:text-[#C8D5B9] transition-colors"
+                      className="text-white/70 hover:text-[#009FB7] transition-colors"
                     >
                       {contactItem.value}
                     </a>
