@@ -163,7 +163,7 @@ export default function Contact() {
                             <Input 
                               placeholder="Your name" 
                               {...field} 
-                              className="bg-white/10 border-white/20 focus-visible:ring-[#F6C026]"
+                              className="bg-white/10 border-white/20 focus-visible:ring-[#009FB7]"
                             />
                           </FormControl>
                           <FormMessage />
@@ -182,7 +182,7 @@ export default function Contact() {
                               placeholder="Your email address" 
                               type="email" 
                               {...field} 
-                              className="bg-white/10 border-white/20 focus-visible:ring-[#F6C026]"
+                              className="bg-white/10 border-white/20 focus-visible:ring-[#009FB7]"
                             />
                           </FormControl>
                           <FormMessage />
@@ -200,7 +200,7 @@ export default function Contact() {
                             <Input 
                               placeholder="Message subject" 
                               {...field} 
-                              className="bg-white/10 border-white/20 focus-visible:ring-[#F6C026]"
+                              className="bg-white/10 border-white/20 focus-visible:ring-[#009FB7]"
                             />
                           </FormControl>
                           <FormMessage />
@@ -219,7 +219,7 @@ export default function Contact() {
                               placeholder="Your message" 
                               rows={6} 
                               {...field} 
-                              className="bg-white/10 border-white/20 focus-visible:ring-[#F6C026]"
+                              className="bg-white/10 border-white/20 focus-visible:ring-[#009FB7]"
                             />
                           </FormControl>
                           <FormMessage />
@@ -230,7 +230,7 @@ export default function Contact() {
                     <Button 
                       type="submit" 
                       disabled={isSubmitting}
-                      className="w-full bg-[#F6C026] hover:bg-[#F6C026]/90 text-[#0F1729]"
+                      className="w-full bg-[#009FB7] hover:bg-[#009FB7]/90 text-white"
                     >
                       {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
