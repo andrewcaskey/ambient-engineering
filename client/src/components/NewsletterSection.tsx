@@ -104,7 +104,7 @@ export const NewsletterSection = () => {
                           name={field.name}
                           ref={field.ref}
                           disabled={field.disabled}
-                          className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#C8D5B9]"
+                          className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#009FB7]"
                         />
                       </FormControl>
                       <FormMessage />

@@ -140,7 +140,7 @@ export const HeroSection = () => {
           {geoElements.map((geo) => (
             <motion.div
               key={`geo-${geo.id}`}
-              className="absolute border border-[#005F6B] rounded-lg"
+              className="absolute border border-[#009FB7] rounded-lg"
               style={{
                 width: `${geo.width}px`,
                 height: `${geo.height}px`,
@@ -209,10 +209,10 @@ export const HeroSection = () => {
             animate="show"
             className="flex flex-col sm:flex-row justify-center gap-4"
           >
-            <a href="#newsletter" className="bg-[#005F6B] text-white px-6 sm:px-8 py-3 rounded-full font-heading font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 text-sm sm:text-base text-center transform hover:scale-105 shadow-lg">
+            <a href="#newsletter" className="bg-[#009FB7] text-white px-6 sm:px-8 py-3 rounded-full font-heading font-bold uppercase tracking-wide hover:bg-[#008DA3] hover:text-white transition-all duration-300 text-sm sm:text-base text-center transform hover:scale-105 shadow-lg">
               Join Waitlist
             </a>
-            <a href="#sound-packs" className="bg-transparent backdrop-blur-md border border-[#C8D5B9] text-[#C8D5B9] px-6 sm:px-8 py-3 rounded-full font-heading font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-all duration-300 text-sm sm:text-base text-center transform hover:scale-105 shadow-lg">
+            <a href="#sound-packs" className="bg-transparent backdrop-blur-md border border-[#009FB7] text-[#009FB7] px-6 sm:px-8 py-3 rounded-full font-heading font-bold uppercase tracking-wide hover:bg-[#009FB7] hover:text-white transition-all duration-300 text-sm sm:text-base text-center transform hover:scale-105 shadow-lg">
               Free Sound Packs
             </a>
           </motion.div>
