@@ -66,7 +66,7 @@ export const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter"
-              className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-9 w-9 rounded-full flex items-center justify-center transition-all duration-300"
+              className="bg-[#005F6B] hover:bg-[#009FB7] p-2 h-9 w-9 rounded-full flex items-center justify-center transition-all duration-300"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
                 <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
@@ -78,7 +78,7 @@ export const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
-              className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-9 w-9 rounded-full flex items-center justify-center transition-all duration-300"
+              className="bg-[#005F6B] hover:bg-[#009FB7] p-2 h-9 w-9 rounded-full flex items-center justify-center transition-all duration-300"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
                 <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10a2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
@@ -91,7 +91,7 @@ export const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Spotify"
-              className="bg-[#005F6B] hover:bg-[#C8D5B9] p-2 h-9 w-9 rounded-full flex items-center justify-center transition-all duration-300"
+              className="bg-[#005F6B] hover:bg-[#009FB7] p-2 h-9 w-9 rounded-full flex items-center justify-center transition-all duration-300"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
                 <circle cx="12" cy="12" r="10"></circle>
