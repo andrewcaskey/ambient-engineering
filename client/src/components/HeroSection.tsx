@@ -111,7 +111,7 @@ export const HeroSection = () => {
           {particles.map((particle) => (
             <motion.div
               key={`particle-${particle.id}`}
-              className="absolute rounded-full bg-[#C8D5B9] blur-xl"
+              className="absolute rounded-full bg-[#009FB7] blur-xl"
               style={{
                 width: `${particle.width}px`,
                 height: `${particle.height}px`,
@@ -173,7 +173,7 @@ export const HeroSection = () => {
             animate="show"
             className="text-4xl sm:text-5xl md:text-7xl font-heading font-black mb-2 md:mb-4 tracking-wide text-white drop-shadow-lg"
           >
-            <span className="text-white">Ambient</span><span className="text-[#C8D5B9]">Lab</span>
+            <span className="text-white">Ambient</span><span className="text-[#009FB7]">Lab</span>
           </motion.h1>
           
           <motion.p 
@@ -191,7 +191,7 @@ export const HeroSection = () => {
             animate="show"
             className="flex justify-center mb-4"
           >
-            <div className="h-1 w-20 bg-[#005F6B] rounded-full"></div>
+            <div className="h-1 w-20 bg-[#009FB7] rounded-full"></div>
           </motion.div>
           
           <motion.p 
