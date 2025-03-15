@@ -77,13 +77,13 @@ export const NewsletterSection = () => {
           className="max-w-3xl mx-auto bg-white/5 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl border border-white/10"
         >
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-['Montserrat'] font-bold uppercase mb-4">
-              Join <span className="text-[#C8D5B9]">AmbientLab</span> Community
+            <h2 className="text-3xl font-bold uppercase mb-4">
+              Join <span className="text-[#009FB7]">AmbientLab</span> Community
             </h2>
-            <p className="font-['Montserrat'] text-lg text-white/80 mb-6">
+            <p className="text-lg text-white/80 mb-6">
               Subscribe to receive exclusive environments, scientific updates, and optimization tips
             </p>
-            <div className="w-16 h-1 bg-[#005F6B] mx-auto"></div>
+            <div className="w-16 h-1 bg-[#009FB7] mx-auto"></div>
           </div>
           
           <Form {...form}>
@@ -127,7 +127,7 @@ export const NewsletterSection = () => {
                           name={field.name}
                           ref={field.ref}
                           disabled={field.disabled}
-                          className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#C8D5B9]"
+                          className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#009FB7]"
                         />
                       </FormControl>
                       <FormMessage />
@@ -152,7 +152,7 @@ export const NewsletterSection = () => {
                         name={field.name}
                         ref={field.ref}
                         disabled={field.disabled}
-                        className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#C8D5B9]"
+                        className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#009FB7]"
                       />
                     </FormControl>
                     <FormMessage />
@@ -169,12 +169,12 @@ export const NewsletterSection = () => {
                       <Checkbox
                         checked={field.value}
                         onCheckedChange={field.onChange}
-                        className="rounded text-[#005F6B] focus:ring-[#C8D5B9]"
+                        className="rounded text-[#009FB7] focus:ring-[#009FB7]"
                       />
                     </FormControl>
                     <div className="space-y-1 leading-none">
                       <FormLabel className="ml-2 text-sm text-white/80">
-                        I agree to receive emails and accept the <a href="/privacy" className="text-[#C8D5B9] hover:underline">Privacy Policy</a>
+                        I agree to receive emails and accept the <a href="/privacy" className="text-[#009FB7] hover:underline">Privacy Policy</a>
                       </FormLabel>
                       <FormMessage />
                     </div>
@@ -186,7 +186,7 @@ export const NewsletterSection = () => {
                 <Button 
                   type="submit" 
                   disabled={mutation.isPending}
-                  className="bg-[#005F6B] text-white px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#C8D5B9] hover:text-[#0F1729] transition-colors duration-300"
+                  className="bg-[#009FB7] text-white px-8 py-3 rounded-full font-bold uppercase tracking-wide hover:bg-[#008da3] hover:text-white transition-colors duration-300"
                 >
                   {mutation.isPending ? "Subscribing..." : "Subscribe Now"}
                 </Button>
