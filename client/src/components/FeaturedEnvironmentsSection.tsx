@@ -13,12 +13,12 @@ export const FeaturedEnvironmentsSection = () => {
 
   const getCategoryColorClass = (category: string) => {
     switch (category.toLowerCase()) {
-      case "focus": return "bg-[#005F6B]";
-      case "relaxation": return "bg-[#C8D5B9]";
-      case "creativity": return "bg-[#FAB95B] text-[#0F1729]";
-      case "productivity": return "bg-[#4A4A4A]";
-      case "sleep": return "bg-[#84A59D]";
-      default: return "bg-[#005F6B]";
+      case "focus": return "bg-[#009FB7]";
+      case "relaxation": return "bg-[#00B4D8]";
+      case "creativity": return "bg-[#00BBF0] text-[#0F1729]";
+      case "productivity": return "bg-[#0077B6]";
+      case "sleep": return "bg-[#007EA7]";
+      default: return "bg-[#009FB7]";
     }
   };
 
@@ -32,10 +32,10 @@ export const FeaturedEnvironmentsSection = () => {
           viewport={{ once: true, amount: 0.25 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-['Montserrat'] font-bold uppercase mb-4">
-            Featured <span className="text-[#C8D5B9]">Environments</span>
+          <h2 className="text-4xl font-bold uppercase mb-4">
+            Featured <span className="text-[#009FB7]">Environments</span>
           </h2>
-          <div className="w-24 h-1 bg-[#005F6B] mx-auto"></div>
+          <div className="w-24 h-1 bg-[#009FB7] mx-auto"></div>
         </motion.div>
         
         {isLoading ? (
@@ -89,11 +89,11 @@ export const FeaturedEnvironmentsSection = () => {
                   <h3 className="font-['Montserrat'] font-bold text-xl mb-2 text-white">{environment.title}</h3>
                   <p className="text-white/70 mb-4 line-clamp-2">{environment.excerpt}</p>
                   <div className="flex justify-between items-center">
-                    <span className="text-[#C8D5B9] text-sm flex items-center">
+                    <span className="text-[#009FB7] text-sm flex items-center">
                       <Settings size={14} className="mr-1" />
                       {formatDistance(new Date(environment.publishedAt), new Date(), { addSuffix: true })}
                     </span>
-                    <Link href={`/stories/${environment.id}`} className="text-[#005F6B] hover:text-[#C8D5B9] transition-colors">
+                    <Link href={`/stories/${environment.id}`} className="text-[#009FB7] hover:text-white transition-colors">
                       Configure →
                     </Link>
                   </div>
@@ -110,7 +110,7 @@ export const FeaturedEnvironmentsSection = () => {
           viewport={{ once: true, amount: 0.25 }}
           className="text-center mt-12"
         >
-          <Link href="/stories" className="inline-block bg-transparent border-2 border-[#005F6B] text-[#005F6B] px-8 py-3 rounded-full font-['Montserrat'] font-bold uppercase tracking-wide hover:bg-[#005F6B] hover:text-white transition-colors duration-300">
+          <Link href="/stories" className="inline-block bg-transparent border-2 border-[#009FB7] text-[#009FB7] px-8 py-3 rounded-full font-bold uppercase tracking-wide hover:bg-[#009FB7] hover:text-white transition-colors duration-300">
             View All Environments
           </Link>
         </motion.div>

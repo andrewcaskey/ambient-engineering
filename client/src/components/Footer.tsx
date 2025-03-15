@@ -50,7 +50,7 @@ export const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.name}
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#C8D5B9] transition-colors"
+                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#009FB7] transition-colors"
                 >
                   {getSocialIcon(social.icon)}
                 </a>
@@ -105,7 +105,7 @@ export const Footer = () => {
                   ) : contactItem.type === "phone" ? (
                     <a 
                       href={`tel:${contactItem.value.replace(/[^0-9+]/g, '')}`} 
-                      className="text-white/70 hover:text-[#C8D5B9] transition-colors"
+                      className="text-white/70 hover:text-[#009FB7] transition-colors"
                     >
                       {contactItem.value}
                     </a>
@@ -123,7 +123,7 @@ export const Footer = () => {
           <p>&copy; {COMPANY_INFO.copyrightYear} {COMPANY_INFO.name}. All rights reserved.</p>
           <div className="flex justify-center space-x-4 mt-2">
             {COMPANY_INFO.policies.map((policy) => (
-              <Link key={policy.path} href={policy.path} className="hover:text-[#C8D5B9] transition-colors">
+              <Link key={policy.path} href={policy.path} className="hover:text-[#009FB7] transition-colors">
                 {policy.name}
               </Link>
             ))}
