@@ -68,10 +68,10 @@ export default function Contact() {
             animate="show"
             className="text-center mb-12"
           >
-            <h1 className="text-5xl font-['Montserrat'] font-bold uppercase mb-4">
-              Contact <span className="text-[#F6C026]">Us</span>
+            <h1 className="text-5xl font-bold uppercase mb-4">
+              Contact <span className="text-[#009FB7]">Us</span>
             </h1>
-            <div className="w-24 h-1 bg-[#F6C026] mx-auto mb-6"></div>
+            <div className="w-24 h-1 bg-[#009FB7] mx-auto mb-6"></div>
             <p className="font-['Playfair_Display'] text-xl max-w-2xl mx-auto text-white/80">
               We'd love to hear from you! Get in touch with our team of dreamweavers.
             </p>
@@ -89,8 +89,8 @@ export default function Contact() {
                 
                 <div className="space-y-6">
                   <div className="flex items-start">
-                    <div className="w-12 h-12 bg-[#F6C026]/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                      <MapPin className="text-[#F6C026]" size={20} />
+                    <div className="w-12 h-12 bg-[#009FB7]/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                      <MapPin className="text-[#009FB7]" size={20} />
                     </div>
                     <div>
                       <h3 className="font-['Montserrat'] font-bold mb-1">Visit Us</h3>
@@ -101,14 +101,14 @@ export default function Contact() {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="w-12 h-12 bg-[#F6C026]/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                      <Mail className="text-[#F6C026]" size={20} />
+                    <div className="w-12 h-12 bg-[#009FB7]/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                      <Mail className="text-[#009FB7]" size={20} />
                     </div>
                     <div>
                       <h3 className="font-['Montserrat'] font-bold mb-1">Email Us</h3>
                       <a 
                         href={`mailto:${FOOTER_LINKS.contact.find(item => item.type === 'email')?.value}`} 
-                        className="text-white/70 hover:text-[#F6C026] transition-colors"
+                        className="text-white/70 hover:text-[#009FB7] transition-colors"
                       >
                         {FOOTER_LINKS.contact.find(item => item.type === 'email')?.value}
                       </a>
@@ -116,14 +116,14 @@ export default function Contact() {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="w-12 h-12 bg-[#F6C026]/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                      <Phone className="text-[#F6C026]" size={20} />
+                    <div className="w-12 h-12 bg-[#009FB7]/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                      <Phone className="text-[#009FB7]" size={20} />
                     </div>
                     <div>
                       <h3 className="font-['Montserrat'] font-bold mb-1">Call Us</h3>
                       <a 
                         href={`tel:${FOOTER_LINKS.contact.find(item => item.type === 'phone')?.value?.replace(/[^0-9+]/g, '')}`} 
-                        className="text-white/70 hover:text-[#F6C026] transition-colors"
+                        className="text-white/70 hover:text-[#009FB7] transition-colors"
                       >
                         {FOOTER_LINKS.contact.find(item => item.type === 'phone')?.value}
                       </a>
