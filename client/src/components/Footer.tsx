@@ -22,9 +22,9 @@ const getSocialIcon = (name: string) => {
 
 const getContactIcon = (type: string) => {
   switch (type) {
-    case "address": return <MapPin className="text-[#F6C026]" size={16} />;
-    case "email": return <Mail className="text-[#F6C026]" size={16} />;
-    case "phone": return <Phone className="text-[#F6C026]" size={16} />;
+    case "address": return <MapPin className="text-[#009FB7]" size={16} />;
+    case "email": return <Mail className="text-[#009FB7]" size={16} />;
+    case "phone": return <Phone className="text-[#009FB7]" size={16} />;
     default: return null;
   }
 };

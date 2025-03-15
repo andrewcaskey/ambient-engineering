@@ -20,7 +20,7 @@ export const AnnouncementBar = () => {
   const formattedAnnouncements = `${ANNOUNCEMENT_MESSAGES.join(' • ')} • `.repeat(2);
 
   return (
-    <div className="bg-[#005F6B] overflow-hidden py-2 relative">
+    <div className="bg-[#009FB7] overflow-hidden py-2 relative">
       <div 
         className="text-white font-['Montserrat'] text-sm px-4 whitespace-nowrap inline-block"
         style={{ transform: `translateX(${translationValue}%)` }}
