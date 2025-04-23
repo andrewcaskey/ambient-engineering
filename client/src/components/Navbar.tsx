@@ -24,7 +24,7 @@ export const Navbar = () => {
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                 </svg>
               </div>
-              <span className="font-medium">ambient<span className="font-semibold text-[#009FB7]">lab</span></span>
+              <span className="font-medium">ambient<span className="font-semibold text-[#009FB7]"> engineering</span></span>
             </a>
           </div>
           
@@ -120,7 +120,7 @@ export const Navbar = () => {
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                 </svg>
               </div>
-              <span className="font-medium">ambient<span className="font-semibold text-[#009FB7]">lab</span></span>
+              <span className="font-medium">ambient<span className="font-semibold text-[#009FB7]"> engineering</span></span>
             </a>
           </div>
           

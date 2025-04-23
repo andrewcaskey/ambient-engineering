@@ -1,4 +1,4 @@
-export const APP_NAME = "AmbientLab";
+export const APP_NAME = "Ambient Engineering";
 
 export const NAVIGATION_LINKS = [
   { name: "Home", path: "/" },
@@ -48,7 +48,7 @@ export const FOOTER_LINKS = {
   ],
   contact: [
     { type: "address", value: "742 Ambient Avenue, Tech District, CA 94107" },
-    { type: "email", value: "contact@ambientlab.com" },
+    { type: "email", value: "contact@ambientengineering.com" },
     { type: "phone", value: "+1 (415) 555-7890" }
   ]
 };

@@ -37,7 +37,7 @@ export const Footer = () => {
           {/* Company info */}
           <div>
             <h3 className="text-2xl font-bold mb-4">
-              <span className="text-white">Ambient</span><span className="text-[#009FB7]">Lab</span>
+              <span className="text-white">Ambient</span><span className="text-[#009FB7]"> Engineering</span>
             </h3>
             <p className="text-white/70 mb-6">
               {COMPANY_INFO.description}
